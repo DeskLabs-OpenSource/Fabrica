@@ -217,3 +217,28 @@ Do site do P1. O que está em "Onde ver" fica no repositório do site dele, e n�
 | N4 | As notas de versão, lidas do arquivo do produto, nunca ficaram atrás. E o corte de versão confere que a versão apareceu no site | Página lida da fonte, e o corte confere a consequência | Conformidade 14.2, 14.3 | — |
 | N5 | A data de atualização da página inicial era fixa num componente e ficou meses atrás | Uma data, de uma constante só | Conformidade 14.8 | — |
 | N6 | O curso capturado do aplicativo real, com dados fictícios e recibo de publicação, foi o material mais elogiado. Produzi-lo ainda achou defeitos de uso | Curso por captura do aplicativo real, com procedência por foto | Conformidade 14.14 | — |
+
+## O. Equipe autônoma
+
+Da equipe de agentes que mantém o P1. Nada disto está na referência; mora na instalação da
+ferramenta de orquestração.
+
+| Nº | O que aconteceu | Regra | Como se cobra | Onde ver |
+|---|---|---|---|---|
+| O1 | A execução de um agente não recebe aviso de tarefa em segundo plano. Agente que encerrava "esperando" virava falha | Bloco comum "esperar sem se perder" em toda instrução | Conformidade 15.4 | — |
+| O2 | Um orçamento em dinheiro, com agentes em assinatura, parou a empresa inteira no começo do mês. E o orçamento não media nada, porque a assinatura cobra zero por uso | O teto é de execuções, num vigia fora da ferramenta | Conformidade 15.11 | — |
+| O3 | Dois terços das execuções que falharam, falharam por cota. Houve dias com uma execução só | A capacidade é medida antes de ligar uma rotina | Conformidade 15.13 | — |
+| O4 | Os agentes consumiam o limite da conta em que o dono trabalha | A conta da equipe não é a do dono | Conformidade 15.14 | — |
+| O5 | A conexão de repositório gerenciada pela ferramenta passou por cima da credencial de cada agente, e todos viraram administradores | Credencial por agente; conexão gerenciada desligada; nenhuma credencial pessoal do dono | Conformidade 15.5, 15.7 | — |
+| O6 | Quem mescla, quem fecha e quem publica eram limites só de instrução, com a mesma credencial em papéis diferentes | O que pode causar dano tem trava fora da instrução | Conformidade 15.6, 15.7 | — |
+| O7 | A concorrência padrão da ferramenta saturou a máquina | Um ou dois agentes ao mesmo tempo | Configuração | — |
+| O8 | Um agente novo entrou e o líder continuou distribuindo para a equipe antiga. O texto de uma rotina ainda falava de uma fase que já tinha acabado | Agente novo atualiza o organograma e as instruções do líder na mesma ação. Texto de rotina é instrução e envelhece | Revisão | — |
+| O9 | Uma primeira issue, feita para atrair quem está começando, foi resolvida por um agente | Quem cura a porta de entrada nunca implementa | Conformidade 15.4 | — |
+| O10 | Canais de divulgação têm regra própria sobre conteúdo de IA, e alguns proíbem até rascunho | Antes de dar um canal a um agente, lê-se a regra do canal na fonte | Conformidade 15.8 | — |
+| O11 | Começar com tudo em rascunho afogou o dono em aprovações | Liberação gradual, canal por canal | Conformidade 15.8 | — |
+| O12 | O canal em que o dono decide caiu, e os agentes avisaram dentro da ferramenta, onde ele não olha | O canal de decisão tem vigia e rota de reserva | Conformidade 15.10 | — |
+| O13 | A cópia de segurança falhou dois dias seguidos sem alarme | Vigia precisa de vigia | Conformidade 15.12 | — |
+| O14 | As tarefas que o disjuntor abria para o dono ficaram abertas, acumulando | Alarme tem dono e prazo; sem quem feche, vira ruído | Revisão | — |
+| O15 | O atendimento, rodando de meia em meia hora, gerou mais da metade de todas as tarefas | Rotina de alta frequência só acorda o agente se houver o que fazer | Conformidade 15.15 | — |
+| O16 | A frente mais parecida com arquiteto, desenvolvedor e verificador foi a mais cara e ficou bloqueada esperando decisão. Uma tarefa dela foi cancelada porque o dono tinha feito o mesmo em outra sessão | No desenvolvimento autônomo, o difícil é o fluxo de decisão: roteiro aprovado em lote, e um dono por frente, registrado | Conformidade 15.18 | — |
+| O17 | Um agente ficou preso em "pausando" e só um conserto no banco o soltou. A ferramenta lança versão toda semana, quase sempre quebrando algo | Atualizar a ferramenta é um procedimento, com cópia antes e conferência depois | Conformidade 15.16 | — |

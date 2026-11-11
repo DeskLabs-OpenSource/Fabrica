@@ -289,3 +289,29 @@ página de instalar e as notas de versão dependem dela, e antes da divulgação
 | 14.12 | Os idiomas têm a mesma estrutura, obrigada por tipo e por teste | Arquivo: o teste | L |
 | 14.13 | Existe o contrato de marca do site | Arquivo | L |
 | 14.14 | O curso é capturado do aplicativo real, com dados fictícios, procedência por foto e recibo de publicação | Leitura do roteiro e do recibo | L. Pode ficar para depois da divulgação se o desenho disser quando |
+
+## 15. Equipe autônoma — capítulo 14
+
+De nível L: a equipe que mantém o projeto existe antes da divulgação. O desenvolvimento
+autônomo é de nível C.
+
+| Nº | Exigência | Como conferir | Nível |
+|---|---|---|---|
+| 15.1 | O produto tem uma empresa própria na ferramenta de orquestração, numa VPS que não é de produção | Execução | L |
+| 15.2 | A definição da empresa (agentes, instruções, rotinas) mora num repositório, e a empresa foi recriada dali num teste | Arquivo; registro do teste | L |
+| 15.3 | Existem, no mínimo: líder, maestro de contribuições, revisor, integrador, suporte e guardião da instalação | Leitura do organograma | L |
+| 15.4 | Cada instrução diz o que não é do agente, e traz os blocos do contrato comum | Leitura | L |
+| 15.5 | A equipe usa uma conta de robô do produto, sem poder sobre workflows, e nenhuma credencial pessoal do dono | Leitura dos nomes e escopos das credenciais | L |
+| 15.6 | A regra do ramo principal não dá passagem a administrador, e a equipe não escreve nele sem contribuição revisada | Comando | L |
+| 15.7 | Cada papel recebe só as credenciais que usa; quem não mescla não tem a credencial de quem mescla | Leitura | L |
+| 15.8 | Está escrito, canal por canal, o que a equipe publica sozinha e o que é rascunho | Leitura | L |
+| 15.9 | Está escrito o que nunca sai da mão do dono | Leitura | L |
+| 15.10 | O canal de decisão do dono tem checagem de que está de pé e rota de reserva | Execução: derrubar o canal num ensaio | L |
+| 15.11 | Um vigia sem IA pausa agente por falha repetida e por teto de execuções, e avisa | Execução: o modo de ensaio | L |
+| 15.12 | A cópia de segurança da ferramenta leva banco, chave de segredos e arquivos dos agentes, e a falha dela dá alarme | Execução | L |
+| 15.13 | A capacidade foi medida: execuções por dia por rotina, e a equipe passou uma semana sem execução perdida por cota | Registro | L |
+| 15.14 | A conta em que os agentes rodam não é a das sessões de trabalho do dono | Leitura | L |
+| 15.15 | Rotina de alta frequência só acorda o agente se houver o que fazer | Leitura | L |
+| 15.16 | Existe o procedimento de atualização da ferramenta, e a versão do assistente dos agentes é fixada | Arquivo | L |
+| 15.17 | Há observador de mercado, com relatório datado e fontes | Leitura | C: quando o roteiro depender do mercado |
+| 15.18 | Desenvolvimento autônomo: o dono aprova o roteiro em lote; uma funcionalidade por vez; caminho sensível passa pelo dono; quem constrói não verifica | Leitura; registro de uma funcionalidade | C: quando a equipe de manutenção passar um mês estável |
