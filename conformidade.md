@@ -221,6 +221,7 @@ O **nível** diz quando o item passa a valer:
 | 11.20 | Toda porta que o instalador publica tem um uso que funciona naquele modo de instalação; o que não tem uso fica só local | Leitura do instalador, modo por modo | F |
 | 11.21 | O CI roda o instalador de verdade, com contêineres, num ambiente descartável, até o usuário criado entrar | Leitura do workflow | F |
 | 11.22 | Sem domínio, o padrão do instalador não publica a tela de entrada sem conexão segura | Leitura; teste do kit | F |
+| 11.23 | Tudo o que o navegador usa chega pela mesma origem do painel. Se houver uma segunda porta, a tela testa o alcance dela e nomeia o que falta | Leitura do proxy e do instalador; teste de tela | F |
 
 ## 12. Distribuição — capítulo 12
 

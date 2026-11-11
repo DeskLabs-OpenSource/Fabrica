@@ -141,6 +141,15 @@ Cada porta que o instalador abre para fora serve a algo que funciona naquele mod
 instalação. Se num modo a capacidade não funciona (sem conexão segura, por exemplo), a porta
 dela fica só local nesse modo.
 
+### 18. Uma origem só para o navegador
+
+Tudo o que a tela usa chega pelo mesmo endereço do painel, encaminhado pelo proxy. Uma segunda
+porta parece barata e cobra em todo modo de instalação: o proxy do operador precisa de mais uma
+regra, o túnel de mais um redirecionamento, o firewall de mais uma liberação.
+
+*O erro:* no segundo produto, o dono abriu o painel por túnel com uma porta só. A capacidade
+nova usava outra, e a tela respondeu "confira sua internet".
+
 ### 13. O instalador termina provando que a pessoa entra
 
 A última coisa que o instalador faz é conferir que a tela de entrada abre e aceita o usuário
