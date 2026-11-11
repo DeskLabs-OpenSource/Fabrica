@@ -60,6 +60,10 @@ que todas as cercas têm o cabeçalho.
 removia porque ninguém sabia por que existia nem de quem era. Cerca sem motivo escrito não pode
 ser removida com segurança, e o que não pode ser removido só acumula.
 
+A própria revisão segue a regra do "só mede o que mudou": cerca com a data vencida avisa na
+contribuição e só reprova no ramo principal. A data venceu por causa do calendário, e não de
+quem contribuiu.
+
 ### Quando criar
 
 As três condições juntas:
@@ -135,6 +139,11 @@ configuração do repositório. O agregador roda sempre, e trata job pulado de f
 
 Um job que decide, pelo caminho alterado, o que precisa rodar evita gastar fila com o que a
 contribuição não tocou.
+
+Dois jobs que nenhum dos dois produtos tem ainda, e que os defeitos medidos pedem: testes que
+dirigem o navegador nos caminhos de primeira impressão, e o instalador rodando de verdade, com
+contêineres, num ambiente descartável. Sem o primeiro, "tem tela" só se prova à mão. Sem o
+segundo, o caminho que grava, sobe e cria o usuário só roda na máquina de um cliente.
 
 "Constroem e sobem": no primeiro produto, um processo ficou morto por várias versões porque
 quebrava na partida, com o teste que o vigiava verde. Construir não é subir.

@@ -72,7 +72,9 @@ segurança tem um teste que prova que ligar e desligar mudam o comportamento.
 
 ### 7. Configuração de segurança lida do banco não reabre sozinha
 
-Se a leitura falha, vale o último valor bom, e nunca o mais permissivo.
+Se a leitura falha, nunca vale o valor mais permissivo. Há duas formas certas: a operação
+falha, ou vale o último valor bom. O segundo produto lê a cada uso e falha fechado, sem guardar
+valor nenhum.
 
 ### 8. Token de API
 

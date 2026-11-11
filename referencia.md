@@ -17,8 +17,8 @@ Três avisos:
 
 - **É um produto, e não um template.** Cada peça carrega o domínio dele. A coluna "O que muda"
   diz o que é do domínio.
-- **A referência também tem dívidas.** O que ela ainda não cumpre da própria Fábrica está em
-  "Onde a referência diverge", no fim. Não copie essas partes.
+- **A referência também tem dívidas.** O que ela ainda não cumpre da própria Fábrica está
+  medido no relatório de auditoria dela; o fim deste arquivo diz onde. Não copie essas partes.
 - **Se a stack do produto novo for outra,** as peças valem como desenho, e não como código.
 
 ## Documentos
@@ -112,47 +112,25 @@ Pasta `install/`.
 | Testes do kit | `install/test/` | Os casos |
 | Composição e proxy | `deploy/docker-compose.yml` | Os serviços |
 
-## Configurado e ainda não exercitado
+## O que a referência ainda não cumpre, e o que nunca exercitou
 
-O que existe na referência e nunca rodou de verdade. Leia como desenho, e não como prova.
+Essas duas listas moram no próprio produto, num lugar só, e são atualizadas a cada auditoria:
 
-| Peça | Situação |
+| O que | Onde, no repositório de referência |
 |---|---|
-| Passo de atualização no CI | É pulado até existir a primeira versão publicada. Nunca rodou |
-| Fila de merge | Configurada. Nenhuma contribuição a atravessou |
-| Publicação de imagens e corte de versão | Nunca rodaram. Não há versão publicada |
-| Imagens para a segunda arquitetura | Declaradas no workflow que nunca rodou |
-| Atualizador | Testado só com um substituto do Docker. Nunca atualizou uma instalação |
-| Acolhida | Nunca disparou. Nenhuma contribuição de fora ainda |
-| Instalação por perguntas no terminal | Só o modo sem perguntas rodou numa máquina real |
-| Instalação em servidor recém-criado | A única instalação real foi numa máquina compartilhada |
-| O caminho central com provedores reais | Só em simulação |
-| Medição de custo com provedores reais | A tela mostra zero para os motores reais |
+| O que está configurado e nunca rodou de verdade | `docs/fundacao/nao-exercitado.md` |
+| O resultado de cada item de [`conformidade.md`](conformidade.md) | o relatório mais recente em `docs/fundacao/`, com nome `conformidade-<data>.md` |
 
-## Onde a referência diverge
+Antes de trazer uma peça, procure o item dela no relatório. Peça de item não conforme vale
+como aviso do que não fazer.
 
-Esta lista é mantida junto com o repositório de referência. Um item sai daqui quando a
-referência converge ou quando ela registra uma decisão diferente.
+O que a primeira auditoria mediu de mais importante, para ninguém copiar por engano:
 
-| Item de conformidade | Situação na referência |
-|---|---|
-| 4.1, 4.7 | Não há documento de design system nem validação do dono; só o arquivo de tokens |
-| 4.5 | As fontes são baixadas de serviço externo na construção |
-| 5.16 | O CI constrói as imagens e não as sobe |
-| 6.1, 6.9 | Ausência de segundo fator, de token de API e de convite pela tela sem decisão registrada |
-| 8.3 | Não há teste de porta no menu |
-| 8.6 | Não há gestão de equipe pela tela |
-| 9.3 | Três invariantes de sistema vivo ficaram de fora sem motivo escrito |
-| 9.8 | Dados pessoais estão num guia, e não numa doutrina |
-| 12.2 | O instalador constrói na VPS quando a versão não tem imagem |
-| 12.3 | A instalação grava o canal estável como versão |
-| 10.5 | As primeiras contribuições entraram com passagem de administrador, sem revisão de outra pessoa |
-| 12.1 | Não existe a cerca que reprova serviço de produção sem imagem |
-| 13.5 | O repositório foi publicado antes da instalação real |
-| 10.5 (regra do ramo) | O script que aplica a regra dá passagem ao administrador da organização. Não o copie como está |
-
-**Ainda não medidos na referência.** Estes itens entraram na lista depois da última conferência
-e ninguém os mediu lá: 2.12 a 2.16, 3.5, 6.12 a 6.15, 7.9 a 7.11, 8.8 a 8.12, 10.12, 11.15 a
-11.20, 12.11 e 13.7 a 13.9. Três foram olhados por amostragem e não são cumpridos: o guia do
-implementador não trata de contrato (2.12), o guia de custos traz o método e não um número
-medido (2.15), e o instalador não confere a entrada do usuário criado (11.16).
+- o instalador grava o canal estável como versão e constrói na VPS quando não há imagem;
+- o script que aplica a regra do ramo dá passagem ao administrador da organização;
+- sem domínio, o padrão do instalador publica o painel pelo endereço da máquina, sem conexão
+  segura;
+- as fontes do painel são baixadas de serviço externo na construção;
+- o job de imagens constrói e não sobe os processos;
+- não há teste que dirija o navegador, nem job que rode o instalador de verdade;
+- a retenção de dados pessoais não está escrita nem é executada.
