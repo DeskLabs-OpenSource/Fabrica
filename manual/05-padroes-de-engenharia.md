@@ -33,15 +33,15 @@ Estas valem em todo produto. O mecanismo muda com a stack; a regra não.
 | 2 | **Um arquivo por peça.** O que o produto tem em quantidade (ferramentas, rotinas, conectores, dicionários) é descoberto por pasta. Nenhuma lista central | C1 |
 | 3 | **Uma porta de acesso ao dado por organização** (capítulo 07) | B1 |
 | 4 | **Um ponto de escrita por entidade** | A6 |
-| 5 | **Fila por notificação.** Quem consome é acordado; não consulta em laço | A5, F4 |
+| 5 | **Fila por notificação.** Quem consome trabalho é acordado; não consulta em laço. Trabalho periódico por natureza (sondar, agendar) usa um agendador declarado, com intervalo configurável, e não uma tarefa que se reenfileira | A5, F4 |
 | 6 | **Configuração de operador tem tela.** Variável de ambiente só com padrão ou gerada pelo instalador | E1 |
 | 7 | **Tudo tem registro**, com vocabulário fechado, e o registro aparece na tela | F1 |
 | 8 | **Nenhum texto visível fora de dicionário** | capítulo 04 |
 | 9 | **Teste sem relógio real, porta fixa ou fuso da máquina.** Código de produto recebe o relógio | D1 |
-| 10 | **Sem escape de tipo e sem erro engolido** | — |
+| 10 | **Sem escape de tipo e sem erro engolido** | prática de base |
 | 11 | **Segredo de operador cifrado em repouso** | H7 |
-| 12 | **Entrada externa validada**: corpo de rota, resposta de provedor, argumento vindo de modelo de IA | — |
-| 13 | **Identificadores em inglês; documentação e tela na língua do público, com tradução** | — |
+| 12 | **Entrada externa validada**: corpo de rota, resposta de provedor, argumento vindo de modelo de IA | prática de base |
+| 13 | **Identificadores em inglês; documentação e tela na língua do público, com tradução** | capítulo 12 |
 
 A regra 2 tem um teste simples: se uma contribuição precisa editar uma lista para registrar uma
 peça, a lista não deveria existir.
@@ -91,6 +91,7 @@ Independem do produto:
 - um run por contribuição: o novo cancela o anterior;
 - o workflow de acolhida não baixa código de fora;
 - fragmento de versão bem formado;
+- nenhum serviço de produção sem imagem publicada;
 - espelho de skills em sincronia;
 - toda cerca tem dono, motivo e data.
 
@@ -147,7 +148,7 @@ A segunda lista é onde moram os defeitos caros. O núcleo dela, para qualquer p
 
 - A peça tem duas conexões?
 - O que aconteceu aparece na linha do tempo, na tela?
-- Se falhar, quem está sendo atendido percebe o quê? E a tela mostra o quê?
+- Se falhar, quem depende do sistema naquele momento percebe o quê? E a tela mostra o quê?
 - Tem tela, ou pede acesso ao servidor?
 - O custo é medido e respeita o teto?
 - A ação destrutiva pede confirmação nomeando o alvo?

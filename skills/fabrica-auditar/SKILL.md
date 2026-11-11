@@ -21,7 +21,7 @@ antes de julgar os itens dela.
 
 ## Medir
 
-Para cada item, um de quatro resultados:
+Para cada item, um de cinco resultados:
 
 | Resultado | Quando | O que você anexa |
 |---|---|---|
@@ -29,13 +29,14 @@ Para cada item, um de quatro resultados:
 | Não conforme | Não cumpre | O que foi conferido e o que faltou |
 | Não se aplica | A condição do item não existe neste produto | O motivo |
 | Decidido diferente | Diverge, e existe um registro de decisão | O caminho do registro |
+| Não medido | Você não conseguiu conferir | O que faltou para medir |
 
 Regras da medição:
 
 - **Meça; não deduza.** Item de arquivo: confira que existe e abra. Item de comando: rode e
   leia a saída. Item de execução: rode o sistema, ou diga que não rodou.
-- **"Não medido" é um quinto resultado honesto.** Se você não conseguiu conferir (falta uma
-  VPS, uma credencial), diga isso. Nunca marque conforme pelo que o documento afirma.
+- **"Não medido" é um resultado honesto.** Se você não conseguiu conferir (falta uma VPS, uma
+  credencial), diga isso. Nunca marque conforme pelo que o documento afirma.
 - **Presença de um nome no código não é prova de comportamento.**
 - **Uma cerca só conta se guarda o que o texto diz.** Abra a cerca.
 - **Itens de nível C** só valem se a condição escrita neles existe. Senão, "não se aplica".
@@ -88,4 +89,4 @@ A auditoria quase sempre ensina algo à Fábrica:
 - defeito que a lista não pegaria.
 
 Escreva isso no fim do relatório, em "Para a Fábrica", e abra uma contribuição no repositório
-dela.
+dela, a partir de um clone separado. Não edite a cópia instalada em `~/.desklabs/fabrica`.

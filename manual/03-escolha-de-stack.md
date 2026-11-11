@@ -11,6 +11,8 @@ Estas condições vêm do modelo de negócio (capítulo 02) e não se discutem p
 - **O destino é uma VPS.** Uma máquina Linux, sem GPU, do tamanho que o parceiro vende para
   quem está começando. O produto inteiro cabe nela.
 - **Instala-se com um comando**, e quem instala não é programador.
+- **Roda em contêineres,** descritos num arquivo de composição, com imagens publicadas. É o
+  que torna a instalação e a atualização iguais em qualquer VPS.
 - **Nada depende de uma conta em serviço de terceiros para subir.** Provedores que fazem parte
   do próprio trabalho do produto (um modelo de IA, uma operadora) são a exceção, e entram por
   tela, depois da instalação.

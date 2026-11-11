@@ -99,7 +99,8 @@ instalação, a prova é pedida de novo.
 
 ### 6. Toda tela tem porta, e o teste lê o disco
 
-Uma tela existe quando alguém chega nela pelo menu. A lista de telas é derivada dos arquivos, e
+Uma tela existe quando alguém chega nela pelo menu. A lista de telas é derivada do que o
+framework usa para declarar telas (arquivos, ou a tabela de rotas), e
 um teste reprova tela que não está no registro de navegação nem numa lista de exceções com
 motivo escrito.
 
@@ -151,7 +152,7 @@ Se a mesma dúvida chega três vezes, o defeito é de descoberta, e vira item de
 ### 14. Listas para dez vezes o exemplo, e o nível de cada ajuste decidido cedo
 
 Cada lista é desenhada para dez vezes o volume do exemplo. E cada configuração tem o nível
-decidido na fundação: da instalação, da organização ou da unidade (um agente, um plano). Mover
+decidido na fundação: da instalação, da organização ou da unidade de trabalho do produto. Mover
 de nível depois é caro, e foi um dos pedidos mais repetidos no primeiro produto.
 
 ## Como saber que ficou pronto

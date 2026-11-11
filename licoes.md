@@ -1,7 +1,7 @@
 # Lições
 
-> O catálogo de erros já pagos e a regra que cada um gerou. Toda regra do manual aponta para
-> uma linha daqui. Regra sem erro de origem não entra.
+> O catálogo de erros já pagos e a regra que cada um gerou. As regras do manual apontam para
+> cá. Regra sem erro de origem não entra.
 
 ## Como ler
 
@@ -150,13 +150,16 @@ Lições da própria fundação do P2. Nenhuma tem cerca: são cobradas pelo mé
 | K10 | O dono, ao tentar entrar, descobriu que não havia como criar conta nem incluir a equipe | "O dono usa o produto" é uma fase, distinta da revisão e da instalação | Método, fase 9 | — |
 | K11 | Muita coisa foi escrita e nunca rodou: fila de merge, acolhida, passo de atualização, publicação de imagens | O produto mantém a lista do que está configurado e ainda não foi exercitado | Revisão | [`referencia.md`](referencia.md) |
 | K12 | No primeiro dia de público, o robô de dependências propôs versões maiores que quebravam o piso declarado | A regra para atualização automática de dependência existe antes da publicação | Configuração do robô | — |
-| K13 | As duas primeiras contribuições depois da fundação entraram com passagem de administrador, implementadas, verificadas e mescladas pela mesma sessão | A regra "quem escreve não aprova" vale desde a primeira contribuição, inclusive para o dono e para agentes | Proteção do ramo, sem exceção para administrador | `scripts/github/apply-ruleset.sh` |
+| K13 | As duas primeiras contribuições depois da fundação entraram com passagem de administrador, implementadas, verificadas e mescladas pela mesma sessão | A regra "quem escreve não aprova" vale desde a primeira contribuição, inclusive para o dono e para agentes | Proteção do ramo, sem exceção para administrador | — (a referência permite a passagem de administrador) |
 
 ## L. O que a comunidade ensinou
 
 Do que quem usa e quem revende o P1 mais pergunta e reclama, lido nos comentários do canal, nas
 issues e no espaço da comunidade. Nenhuma destas é defeito de código: são decisões de fundação
 que não foram tomadas.
+
+O erro de cada linha foi medido. **A regra ainda não rodou em nenhum produto:** nem o P1 nem o
+P2 a cumprem por inteiro. Trate como o ponto de partida da terceira fundação.
 
 | Nº | O que aconteceu | Regra | Como se cobra | Onde ver |
 |---|---|---|---|---|
@@ -166,11 +169,29 @@ que não foram tomadas.
 | L4 | "Configurei tudo e não acontece nada": uma proteção ligada de fábrica bloqueava o resultado sem avisar. Foi a dúvida que mais voltou, e fez gente experiente concluir que o produto não funcionava | Toda proteção ligada por padrão se anuncia na tela onde a pessoa espera o resultado, dizendo o que bloqueia e onde liberar | Revisão; conformidade 8.8 | — |
 | L5 | Tela vazia para sempre, sem dizer por quê. Erro que listava todos os requisitos em vez do que faltava. Erro que culpava a conexão quando a causa era uma opção desligada | Tela vazia explica o vazio. Erro nomeia o item que falta | Revisão; conformidade 8.9 | — |
 | L6 | Integrações travavam num passo do lado do fornecedor (aprovação, plano mínimo, modo de teste) que o material não cobria | O guia de cada integração cobre também o lado do terceiro, e a tela de conexão testa o pré-requisito e diz qual falta | Revisão; conformidade 8.10 | — |
-| L7 | Quem revende perguntava preço, contrato, prova de uso real e o que é suportado em produção. A comunidade improvisava as respostas | Produto feito para ser revendido nasce com o kit de quem revende | Conformidade 2.9 | `docs/guides/ganhar-dinheiro-implementando.md` |
+| L7 | Quem revende perguntava preço, contrato, prova de uso real e o que é suportado em produção. A comunidade improvisava as respostas | Produto feito para ser revendido nasce com o kit de quem revende | Conformidade 2.12 | `docs/guides/ganhar-dinheiro-implementando.md` |
 | L8 | A instalação "concluía" e a tela de login nunca abria. Quem instalava em ambiente fora do recomendado ficava sem saída | O instalador termina provando que a pessoa consegue entrar. Os ambientes suportados são declarados, e os outros têm um caminho escrito | Conformidade 11.5, 11.16 | — |
 | L9 | O espaço da comunidade abriu dizendo que não havia suporte, e perguntas ficaram semanas sem resposta. Quem resolvia eram dois ou três membros | Quem responde, em quanto tempo e por onde é decisão escrita antes do lançamento, mesmo que a resposta seja "ninguém, e este é o caminho". Pergunta sem resposta no prazo tem dono | Conformidade 10.12 | — |
 | L10 | O vídeo era a documentação, e envelhecia mais rápido que o produto. "Faltou esse pedaço no vídeo" virou resposta padrão | Vídeo divulga. O "como fazer" mora no repositório, é conferido a cada versão, e todo vídeo aponta para ele | Conformidade 12.11 | — |
 | L11 | Quem personalizava tinha medo de atualizar. Mudar um texto da página inicial fazia a instalação ser tratada como modificada | Tudo o que quem revende vai querer mudar é configuração ou extensão que sobrevive à atualização. O que só muda editando código é dívida declarada | Conformidade 2.11 | — |
 | L12 | Telas desenhadas para três itens recebiam trinta. Ajustes globais precisavam ser por unidade | Cada lista é desenhada para dez vezes o exemplo. O nível de cada configuração (instalação, organização, unidade) é decidido na fundação | Revisão; conformidade 8.11 | — |
-| L13 | Pedidos pequenos atendidos em dias, com crédito a quem pediu, geraram os agradecimentos mais fortes. O material de ensino navegável foi o mais elogiado | Manter curto o ciclo pedido → versão → crédito. Investir em material que se percorre, e não só se assiste | Prática | — |
-| L14 | O público reclamou de interface complexa e de sistema que incha a cada versão | O que não é do trabalho central nasce como peça opcional, desligada por padrão | Regra de produto | `GOVERNANCE.md` |
+| L13 | Pedidos pequenos atendidos em dias, com crédito a quem pediu, geraram os agradecimentos mais fortes. O material de ensino navegável foi o mais elogiado | Manter curto o ciclo pedido → versão → crédito. Investir em material que se percorre, e não só se assiste | Revisão | — |
+| L14 | O público reclamou de interface complexa e de sistema que incha a cada versão | O que não é do trabalho central nasce como peça opcional, desligada por padrão | Regra de produto | — |
+
+## M. Tela, acesso e marca
+
+Erros do P1 que os capítulos 04, 06 e 08 narram.
+
+| Nº | O que aconteceu | Regra | Como se cobra | Onde ver |
+|---|---|---|---|---|
+| M1 | Uma proibição visual existia só em prosa, e os próprios componentes de base a violavam | Proibição visual mecânica vira cerca no primeiro commit | Cerca | — |
+| M2 | As fontes eram baixadas de serviço externo na construção, e a construção caía quando ele não respondia | Fonte versionada no repositório | Revisão | — (a referência ainda baixa) |
+| M3 | Um gráfico usava um token de cor que não existia e sumia da tela, com tudo verde | Token consumido tem de existir | Teste | — |
+| M4 | A marca de quem revende era gravada na construção, e aparecia errada na instalação dele | Marca é lida em tempo de execução | Teste | — |
+| M5 | O segundo fator era forçado ao administrador, e toda instalação nova recebia um bloqueio de tela cheia que ninguém anunciou | Segurança opcional nasce desligada e se liga pela tela | Revisão | — |
+| M6 | Rotas que comparavam o nível do papel à mão pulavam a conferência do segundo fator | Uma função só decide o papel | Verificação que reprova a comparação direta | `apps/panel/src/server/context.ts` |
+| M7 | Uma opção de segurança era gravada e nunca lida | Controle que aparece na tela tem teste de efeito | Teste | — |
+| M8 | A documentação dizia um formato de chave e o código gerava outro | Um formato só, conferido por teste | Teste | — |
+| M9 | Um papel de suporte "só leitura" conseguia escrever, porque as rotas conferiam o papel e não o escopo | O poder de instalação tem escopo, conferido em toda rota de escrita | Verificação | — |
+| M10 | Telas existiam e não tinham porta no menu | A lista de telas vem do disco, e um teste a amarra ao menu | Teste | — (a referência não tem) |
+| M11 | O banco de teste não reproduzia as permissões do banco real, e funções internas ficavam alcançáveis com o teste verde | A prova de isolamento roda com o papel e as permissões do banco real | Teste | `packages/core/test/isolation.db.test.ts` |

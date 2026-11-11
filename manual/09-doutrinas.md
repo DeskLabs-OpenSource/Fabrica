@@ -85,8 +85,9 @@ ou um encerramento declarado.
 **Os invariantes.** Sete, do primeiro produto:
 
 1. **Duas conexões.** Toda peça tem o que a alimenta e o que ela alimenta, reais.
-2. **Continuidade entre IA e humano, nas duas direções.** Onde a IA termina, o humano continua
-   com contexto, e vice-versa. O que passa é um resumo estruturado, e não a conversa crua.
+2. **Continuidade entre o sistema e o humano, nas duas direções.** Onde o agente termina, o
+   humano continua com contexto, e vice-versa. O que passa é um resumo estruturado, e não o
+   registro cru.
 3. **Registro universal e visível.** O que aconteceu está na linha do tempo, e a linha do tempo
    está na tela.
 4. **Nenhuma demanda sem próximo passo.** Algo impede que ela morra parada.
@@ -96,8 +97,8 @@ ou um encerramento declarado.
 
 Dois, que o segundo produto acrescentou e que valem para qualquer sistema autônomo:
 
-8. **Nada termina em silêncio.** Toda falha tem um aviso para quem está sendo atendido e um
-   evento para a tela.
+8. **Nada termina em silêncio.** Toda falha tem um aviso para quem depende do sistema naquele
+   momento (quem está sendo atendido, ou o responsável) e um evento para a tela.
 9. **Autonomia com limite visível.** Teto de custo, de duração, de ações. O limite aparece.
 
 **A regra do tempo.** Observação em tempo real; ação no tempo do humano. O sistema nunca age
@@ -114,7 +115,7 @@ mais rápido do que alguém consegue interromper.
 7. Onde me configuram?
 8. Qual a continuidade com o humano?
 9. Qual o meu laço de retorno?
-10. Atualizei o mapa?
+10. Atualizei o desenho da arquitetura?
 
 Resposta que não nomeia um artefato concreto não vale.
 

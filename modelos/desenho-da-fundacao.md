@@ -14,11 +14,13 @@
 
 ## Decisões do dono
 
-1. **Fronteira [dono]:** <relação com cada produto irmão>
-2. **Parceiro de distribuição [dono]:** <quem, e onde aparece>
-3. **Casa [dono]:** <organização, repositório, licença>
-4. **<A peça central da stack> [dono]:** <escolha>
-5. **O que nasce desligado [dono]:** <capacidades de risco e a condição para ligar>
+<Só entra aqui o que o dono decidiu de fato. O resto vai em "Decisões do construtor".>
+
+1. **Parceiro de distribuição:** <quem, e onde aparece>
+2. **Casa:** <organização, repositório, licença>
+3. **Fronteira:** <relação com cada produto irmão>
+4. **<A peça central da stack>:** <escolha>
+5. **O que nasce desligado:** <capacidades de risco e a condição para ligar>
 
 ## Objetivos da fundação
 
@@ -67,9 +69,9 @@ Regras de forma:
 <Uma linha por lição de `licoes.md` que se aplica a este produto. Lição que não se aplica é
 dita, com o motivo.>
 
-| Lição | Regra aqui |
-|---|---|
-| | |
+| Lição | Regra aqui | O que cobra (caminho), ou "ainda não cobrado" |
+|---|---|---|
+| | | |
 
 ## Decisões do construtor
 

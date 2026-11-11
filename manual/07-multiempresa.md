@@ -4,6 +4,11 @@
 > A lição dos dois produtos é a mesma: isolamento que depende de alguém lembrar acaba furado, e
 > lista mantida à mão deixa de fora a tabela nova.
 
+Este capítulo usa o vocabulário de um banco relacional com papéis e regras por linha, porque é
+o que os dois produtos usam. Com outro armazenamento, as regras 2, 3, 5 e 10 valem como estão;
+as regras 6 a 9 valem pelo equivalente que ele oferecer, ou são registradas como "não se
+aplica" com o motivo.
+
 ## Decisões a registrar
 
 | Decisão | Ponto de partida |
@@ -31,8 +36,7 @@ O código de produto não escolhe a organização em cada consulta. Ele entra po
 prende a transação à organização, e o banco recusa o resto.
 
 *O erro:* no primeiro produto, o caminho com poder total sobre o banco pedia que cada rota
-lembrasse de filtrar. A maior parte dos avisos de segurança do projeto veio de um filtro
-esquecido, e uma mensagem chegou a poder cair na organização errada.
+lembrasse de filtrar, e o isolamento foi furado em caminhos que esqueciam o filtro.
 
 | | Primeiro produto | Segundo produto |
 |---|---|---|

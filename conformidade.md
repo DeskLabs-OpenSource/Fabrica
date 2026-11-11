@@ -8,8 +8,11 @@
 
 - Cada item tem um jeito de conferir. **Arquivo** e **comando** são mecânicos. **Leitura** pede
   abrir e julgar. **Execução** pede rodar o sistema.
-- O resultado de cada item é um de quatro: **conforme**, **não conforme**, **não se aplica**
-  (com o motivo), **decidido diferente** (com o registro de decisão).
+- O resultado de cada item é um de cinco: **conforme**, **não conforme**, **não se aplica**
+  (com o motivo), **decidido diferente** (com o registro de decisão), **não medido** (com o que
+  faltou para medir).
+- Item de nível F **não conforme** impede a publicação. As saídas são corrigir, registrar a
+  decisão, ou o dono aceitar por escrito publicar com ele aberto.
 - "Decidido diferente" é resposta legítima. A Fábrica exige a decisão escrita, e não a
   obediência. O que ela não aceita é a divergência sem motivo.
 - Quando um item "decidido diferente" tiver uma razão melhor que a do manual, a lição volta para
@@ -17,7 +20,7 @@
 
 O **nível** diz quando o item passa a valer:
 
-- **F**: fundação. Vale antes do primeiro lançamento.
+- **F**: fundação. Vale antes da publicação.
 - **C**: crescimento. Vale quando a condição escrita no item aparecer.
 
 ---
@@ -50,7 +53,8 @@ O **nível** diz quando o item passa a valer:
 | 2.10 | Todo custo de provedor aparece na tela e respeita um teto do operador | Execução | F |
 | 2.11 | Marca própria é configuração em tempo de execução e sobrevive à atualização | Execução | C: quando houver revenda com marca |
 | 2.12 | O guia do implementador responde: quanto cobrar (método), quem paga os provedores, como prever o gasto, contrato, capacidade da máquina, acesso do cliente, a quem recorrer | Leitura | F |
-| 2.13 | O custo mensal real do caminho recomendado foi medido e está publicado | Leitura do guia de custos | F |
+| 2.13 | O custo mensal do caminho recomendado está estimado, com o método, e diz onde cada limite gratuito acaba | Leitura do guia de custos | F |
+| 2.15 | O custo mensal foi medido em uso real, e o guia traz o número com a data | Leitura | C: depois do primeiro uso real |
 | 2.14 | Há um caso real documentado, e a lista do que é suportado em produção | Arquivo | C: depois do primeiro uso real |
 
 ## 3. Stack — capítulo 03
@@ -60,13 +64,14 @@ O **nível** diz quando o item passa a valer:
 | 3.1 | Cada escolha estrutural tem registro de decisão com alternativas descartadas e custos | Arquivo | F |
 | 3.2 | O sistema sobe sem conta em serviço de terceiros | Execução: instalação limpa | F |
 | 3.3 | Dependências de terceiros com versão fixa | Leitura do arquivo de composição | F |
-| 3.4 | Consumo do sistema parado medido na menor VPS do parceiro | Execução | F |
+| 3.4 | Memória e disco do sistema parado, medidos na VPS da instalação real, estão registrados com o tamanho da máquina | Leitura do registro da instalação real | F |
+| 3.5 | A peça de maior risco técnico rodou antes de o desenho ser fechado: num produto irmão, ou sozinha numa VPS | Registro de decisão | F |
 
 ## 4. Design system — capítulo 04
 
 | Nº | Exigência | Como conferir | Nível |
 |---|---|---|---|
-| 4.1 | Existe documento de design system: direção, tokens, componentes, antipadrões, voz | Arquivo | F |
+| 4.1 | Existe documento de design system com a direção e as proibições, cada uma com o motivo | Arquivo | F |
 | 4.2 | Cada proibição mecânica (biblioteca, fonte, cor fora de token) tem cerca | Arquivo: a cerca | F |
 | 4.3 | Componentes usam só token semântico | Comando: busca por valor solto de cor nos componentes | F |
 | 4.4 | Uma fonte só de tokens | Leitura | F |
@@ -79,19 +84,20 @@ O **nível** diz quando o item passa a valer:
 | Nº | Exigência | Como conferir | Nível |
 |---|---|---|---|
 | 5.1 | Um documento de autoridade (`AGENTS.md`); os específicos de ferramenta só o importam | Arquivo | F |
-| 5.2 | Cada convenção do documento aponta para a cerca ou o teste que a cobra | Leitura | F |
+| 5.2 | Cada convenção do documento aponta para a cerca ou o teste que a cobra, ou diz que é cobrada na revisão | Leitura | F |
 | 5.3 | Cada antipadrão traz o erro que o originou | Leitura | F |
 | 5.4 | Definição de pronto em duas listas: o que o CI reprova e o que o CI não vê | Leitura | F |
 | 5.5 | Um caminho de schema; migrations por carimbo de tempo | Arquivo: a cerca; não existe segundo retrato do banco | F |
 | 5.6 | Um arquivo por peça; nenhuma lista central | Arquivo: a cerca | F |
-| 5.7 | Fila por notificação; nenhuma tarefa que se reagenda em intervalo curto | Comando: busca por reagendamento e intervalos | F |
+| 5.7 | Quem consome trabalho é acordado por notificação. Trabalho periódico usa um agendador declarado; nenhuma tarefa se reenfileira sozinha para esperar | Leitura do consumidor da fila e das rotinas | F |
 | 5.8 | Nenhuma variável de ambiente sem padrão | Arquivo: a cerca | F |
 | 5.9 | Toda cerca tem dono, motivo e data de revisão | Arquivo: a cerca das cercas | F |
 | 5.10 | Cada cerca guarda o que o texto diz que ela guarda | Leitura, cerca por cerca, contra o documento | F |
 | 5.11 | Um check obrigatório que agrega os outros | Comando: a proteção do ramo | F |
 | 5.12 | Check de contribuição só mede o que ela mudou; estado acumulado é do ramo principal | Leitura dos workflows | F |
-| 5.13 | Cada job diz se a causa está na contribuição ou fora | Execução: um vermelho de propósito | F |
-| 5.14 | O CI instala do zero e atualiza a partir da última versão, com dados | Leitura do workflow | F |
+| 5.13 | Cada job do CI tem o passo que diz se a causa está na contribuição ou fora | Leitura dos workflows | F |
+| 5.14 | O CI instala do zero | Leitura do workflow | F |
+| 5.20 | O CI atualiza a partir da última versão publicada, com dados, e esse passo já rodou | Execução | C: depois da primeira versão publicada |
 | 5.15 | O caminho central roda de ponta a ponta sem credencial, no CI | Comando: o comando de demonstração | F |
 | 5.16 | As imagens constroem **e sobem** no CI | Leitura do workflow | F |
 | 5.17 | Varredura de segredo no CI e antes do commit | Leitura | F |
@@ -113,6 +119,9 @@ O **nível** diz quando o item passa a valer:
 | 6.9 | O que o produto não tem está em "limites conhecidos" | Leitura do documento de segurança | F |
 | 6.10 | Segundo fator opcional, ligado pela tela, com cadastro e prova separados | Execução | C: quando houver segundo fator |
 | 6.11 | Token de API: em claro uma vez, resumo no banco, nunca em endereço | Leitura | C: quando houver API pública |
+| 6.12 | A sessão é validada no servidor a cada requisição | Leitura | F |
+| 6.13 | Cada controle de segurança da tela tem um teste que prova que ligar e desligar mudam o comportamento | Arquivo: o teste | F |
+| 6.14 | Configuração de segurança lida do banco mantém o último valor bom quando a leitura falha | Leitura | F |
 
 ## 7. Multiempresa — capítulo 07
 
@@ -122,10 +131,13 @@ O **nível** diz quando o item passa a valer:
 | 7.2 | Uma porta única; acesso direto ao banco fora do núcleo é reprovado | Arquivo: a cerca | F |
 | 7.3 | A porta de sistema só em arquivo listado com motivo | Arquivo: a cerca e a lista | F |
 | 7.4 | O teste de isolamento tenta atravessar, e descobre as tabelas pelo catálogo | Leitura do teste | F |
-| 7.5 | O teste roda com o papel da aplicação, em banco criado pelo caminho do instalador | Leitura | F |
-| 7.6 | Chaves entre tabelas levam a organização | Leitura do schema | F |
+| 7.5 | O teste roda com o papel da aplicação, em banco criado pelo caminho do instalador | Leitura | F, se o banco tem papéis |
+| 7.6 | Chaves entre tabelas levam a organização | Leitura do schema | F, se o banco tem chaves estrangeiras |
 | 7.7 | Todo recurso compartilhado tem regra de posse que falha fechado | Leitura; registro de decisão | F |
 | 7.8 | Nenhuma rota assume "só existe uma organização" | Leitura das rotas | F |
+| 7.9 | A organização vem da sessão, da chave ou do segredo de quem chama, e nunca do corpo da requisição | Leitura das rotas | F |
+| 7.10 | O papel da aplicação não contorna o isolamento | Leitura | F, se o banco tem papéis |
+| 7.11 | Registro de auditoria é só de acréscimo, por permissão do banco | Comando: as permissões da tabela | C: quando houver auditoria |
 
 ## 8. Administração — capítulo 08
 
@@ -133,7 +145,7 @@ O **nível** diz quando o item passa a valer:
 |---|---|---|---|
 | 8.1 | Tudo o que o operador configura tem tela, ou decisão escrita de que fica no servidor | Leitura: o inventário | F |
 | 8.2 | Toda entidade criada pela tela se edita e se remove pela tela | Execução | F |
-| 8.3 | Toda tela tem porta no menu, e um teste lê as telas do disco | Arquivo: o teste | F |
+| 8.3 | Toda tela tem porta no menu, e um teste deriva a lista de telas do que o framework declara | Arquivo: o teste | F |
 | 8.4 | A tela de saúde mostra cada peça e cada ligação | Execução | F |
 | 8.5 | Ação destrutiva pede confirmação nomeando o alvo | Execução | F |
 | 8.6 | Gestão de equipe e papéis pela tela | Execução | F |
@@ -142,6 +154,7 @@ O **nível** diz quando o item passa a valer:
 | 8.9 | Tela vazia diz por quê; erro nomeia o item que falta | Execução | F |
 | 8.10 | Cada integração externa tem teste de conexão que diz o pré-requisito que falta, e guia que cobre o lado do terceiro | Execução; arquivo | F |
 | 8.11 | O nível de cada configuração (instalação, organização, unidade) está decidido e escrito | Leitura do desenho | F |
+| 8.12 | Toda rota de administração valida o papel dentro dela, e não só numa barreira anterior | Leitura | F |
 
 ## 9. Doutrinas — capítulo 09
 
@@ -154,8 +167,8 @@ O **nível** diz quando o item passa a valer:
 | 9.5 | Capacidade de risco nasce desligada, e o código impõe os limites | Execução | F |
 | 9.6 | Controle legal anunciado tem padrão que o cumpre numa instalação nova | Execução | F |
 | 9.7 | O padrão de uma aprovação humana é do operador | Leitura | F |
-| 9.8 | Doutrina de dados pessoais: responsável, retenção executada, anonimização | Arquivo | F |
-| 9.9 | Nomes de doutrina iguais aos da família para a mesma lei | Leitura | F |
+| 9.8 | Está escrito quem responde pelos dados pessoais, a retenção e como ela é executada | Arquivo: doutrina ou guia | F |
+| 9.9 | As doutrinas herdadas usam os nomes da tabela do capítulo 09 para a mesma lei | Leitura | F |
 | 9.10 | Existe skill de doutrina que responde "isto é permitido?" | Arquivo | F |
 
 ## 10. Contribuição — capítulo 10
@@ -166,7 +179,7 @@ O **nível** diz quando o item passa a valer:
 | 10.2 | `CONTRIBUTING`, `GOVERNANCE`, `CREDITS`, `SECURITY`, `CODE_OF_CONDUCT` | Arquivo | F |
 | 10.3 | Regras de produto com o porquê de cada uma | Leitura | F |
 | 10.4 | Formato de pedido de decisão com padrão e prazo | Leitura | F |
-| 10.5 | Proteção do ramo: aprovação de outra pessoa e fila de merge | Comando | F |
+| 10.5 | Proteção do ramo: aprovação de quem não escreveu, e fila de merge. Com um mantenedor só, está registrado quem revisa (um agente revisor distinto de quem implementou conta) | Comando; registro | F |
 | 10.6 | Skill de contribuição com pré-voo que só mede e hooks que barram o irreversível | Arquivo | F |
 | 10.7 | As ferramentas do contribuidor medem contra o repositório original | Leitura dos scripts | F |
 | 10.8 | Acolhida automática que não avalia e não baixa código de fora | Arquivo: workflow e cerca | F |
@@ -187,7 +200,7 @@ O **nível** diz quando o item passa a valer:
 | 11.6 | A saúde tem linha por ligação entre peças, e código de saída por gravidade | Execução | F |
 | 11.7 | O instalador grava com dono e permissão explícitos o que outro serviço lê | Leitura | F |
 | 11.8 | Backup conferido por restauração; restauração conferida por contagem | Execução | F |
-| 11.9 | Atualização com backup, saúde e volta automática | Execução: uma atualização que quebra de propósito | F |
+| 11.9 | Atualização com backup, saúde e volta automática, exercitada entre duas versões | Execução: uma atualização que quebra de propósito | C: depois da primeira versão publicada |
 | 11.10 | Diagnóstico com segredos mascarados | Execução | F |
 | 11.11 | Proxy já existente é detectado | Execução | F |
 | 11.12 | A versão em execução se vê de fora | Execução | F |
@@ -196,6 +209,8 @@ O **nível** diz quando o item passa a valer:
 | 11.15 | Nenhum padrão do instalador aponta para recurso que não sustenta produção sem avisar | Leitura | F |
 | 11.16 | O instalador termina conferindo que a tela de entrada aceita o usuário criado | Execução | F |
 | 11.17 | O README declara os ambientes em que a instalação é provada, e o que fazer nos outros | Leitura | F |
+| 11.18 | Os segredos são separados por quem usa; a aplicação não recebe a senha de dono do banco | Leitura | F |
+| 11.19 | O kit recusa rodar de uma pasta que não é a da instalação | Execução | F |
 
 ## 12. Distribuição — capítulo 12
 
@@ -209,7 +224,7 @@ O **nível** diz quando o item passa a valer:
 | 12.6 | Etiqueta só nasce no CI, do ramo principal | Leitura do workflow | F |
 | 12.7 | Notas por fragmento, com o efeito no operador; número calculado | Arquivo: a cerca | F |
 | 12.8 | "Exige ação" é um bloco do fragmento, com o passo exato | Leitura | F |
-| 12.9 | Versão cortada inteira pelo CI, com o ramo principal verde | Execução | F |
+| 12.9 | Versão cortada inteira pelo CI, com o ramo principal verde | Execução | C: depois da publicação |
 | 12.10 | Documentação e tela nos idiomas declarados | Leitura | F |
 | 12.11 | O "como fazer" mora no repositório e é conferido a cada versão | Leitura | F |
 
@@ -222,4 +237,7 @@ O **nível** diz quando o item passa a valer:
 | 13.3 | Houve revisão fria, e o parecer está guardado | Arquivo | F |
 | 13.4 | Cada bloqueador da revisão fria foi fechado, com a mudança que o fechou | Leitura | F |
 | 13.5 | Houve instalação real antes do lançamento | Registro com evidência | F |
-| 13.6 | As lições novas foram devolvidas à Fábrica | Leitura de `licoes.md` | F |
+| 13.6 | As lições novas foram devolvidas à Fábrica | Contribuição aberta no repositório dela | C: depois da publicação |
+| 13.7 | Um caminho de ponta a ponta foi executado pelas entradas reais, antes e depois da revisão fria | Registro | F |
+| 13.8 | O dono usou o produto, e o que ele não conseguiu fazer está escrito | Arquivo | F |
+| 13.9 | Existe a lista do que está configurado e ainda não foi exercitado | Arquivo | F |

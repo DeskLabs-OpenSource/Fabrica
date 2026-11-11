@@ -15,7 +15,8 @@ Num terminal com um assistente de código (Claude Code, Codex, Cursor, OpenCode,
 curl -fsSL https://raw.githubusercontent.com/DeskLabs-OpenSource/Fabrica/main/install.sh | bash
 ```
 
-Isso baixa a Fábrica em `~/.desklabs/fabrica` e liga duas skills ao seu assistente. Abra uma
+Precisa de `bash` e `git` (Linux, macOS ou WSL). Isso baixa a Fábrica em `~/.desklabs/fabrica`
+e liga duas skills ao seu assistente. Abra uma
 sessão nova e diga o que quer:
 
 | Você diz | O que acontece |
@@ -25,8 +26,8 @@ sessão nova e diga o que quer:
 
 Rodar o comando de novo atualiza. Para desfazer: `bash ~/.desklabs/fabrica/install.sh --remover`.
 
-Ou, sem instalar nada: cole o endereço deste repositório no seu assistente e peça para ele
-seguir o [`AGENTS.md`](AGENTS.md).
+Ou, sem instalar: clone este repositório, abra o assistente dentro dele e peça para seguir o
+[`AGENTS.md`](AGENTS.md).
 
 ## De onde vem
 
@@ -37,8 +38,12 @@ De dois produtos reais:
 - **DeskVoice**, o segundo. Foi fundado a partir das lições do primeiro, e é a prova prática
   deste método. Onde os dois divergem por uma razão medida, o manual segue a razão.
 
-Regra de entrada: uma prática só vira capítulo depois de ter rodado em pelo menos um dos dois.
-O que é hipótese está marcado como **não provado**.
+Regra de entrada: toda regra nasce de um erro medido num dos dois. Onde a solução ainda não
+rodou em nenhum produto, o texto diz **não provado**.
+
+A Fábrica foi escrita para os produtos da DeskLabs, e por isso fala em parceiro de
+infraestrutura e em produtos irmãos. Quem é de fora pode usar: onde uma pergunta não fizer
+sentido para o seu projeto, a resposta é "não se aplica", com o motivo.
 
 ## Para quem
 

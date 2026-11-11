@@ -26,11 +26,17 @@ for f in arquivos:
 
 # 2. Nada de número interno, menção a pessoa ou valor em dinheiro nos arquivos públicos.
 proibido = re.compile(r'#[0-9]{2,}\b|(?<![\w`/.-])@[a-z0-9_-]{3,}|R\$ ?[0-9]')
-for f in arquivos:
-    if f.startswith('modelos/'):
-        continue
+email = re.compile(r'[A-Za-z0-9._%+-]+@[A-Za-z0-9-]+\.[A-Za-z0-9.-]*[a-z]{2,}')
+local = re.compile(r'/Users/|/home/[a-z]|/private/tmp')
+# Este arquivo fica de fora: ele contém os próprios padrões que procura.
+textos = arquivos + [f for f in glob.glob('**/*.sh', recursive=True)
+                     if not f.startswith('_privado') and f != 'scripts/conferir.sh']
+for f in textos:
     for n, linha in enumerate(open(f, encoding='utf-8'), 1):
-        if proibido.search(linha):
+        achou = email.search(linha) or local.search(linha)
+        if not achou and f.endswith('.md') and not f.startswith('modelos/'):
+            achou = proibido.search(linha)
+        if achou and 'noreply@' not in linha:
             falhas += 1
             print(f'termo que não se publica: {f}:{n}: {linha.strip()[:80]}')
 

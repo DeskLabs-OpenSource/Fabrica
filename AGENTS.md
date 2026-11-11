@@ -5,8 +5,9 @@
 
 ## O que você tem em mãos
 
-Um manual de método, e não um template. Você não copia arquivos daqui para o produto novo: você
-segue as fases, toma as decisões na ordem e produz os artefatos que cada fase pede.
+Um manual de método, e não um template. Você não copia código daqui para o produto novo: você
+segue as fases, toma as decisões na ordem e produz os artefatos que cada fase pede. Os
+documentos de `modelos/` são formulários para preencher.
 
 A implementação de referência das mecânicas é o repositório do
 [DeskVoice](https://github.com/DeskLabs-OpenSource/DeskVoice). [`referencia.md`](referencia.md)
@@ -51,8 +52,8 @@ seja uma decisão escrita.
 
 - **Regra nova precisa de erro de origem.** Ele entra em `licoes.md`, com o que aconteceu, a
   regra e como se cobra. Depois o capítulo aponta para a linha.
-- **Uma prática só vira capítulo depois de ter rodado num produto.** O que é proposta fica numa
-  seção "Não provado".
+- **Toda regra nasce de um erro medido num produto.** Onde a solução ainda não rodou em nenhum,
+  o texto diz: numa seção "Não provado", ou na própria lição.
 - **Onde os produtos divergem, o manual segue a razão medida,** e diz qual produto precisa
   convergir.
 - **Regra nova em capítulo ganha um item em `conformidade.md`,** com o jeito de conferir.

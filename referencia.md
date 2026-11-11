@@ -82,7 +82,7 @@ Pasta `fences/`. Cada arquivo abre com dono, motivo e data de revisão.
 | Publicação de imagens | `.github/workflows/publish-image.yml` | Os nomes das imagens |
 | Corte de versão | `.github/workflows/release.yml`, `scripts/release/`, `scripts/release.ts` | O nome do repositório |
 | Fragmentos | `.changes/README.md` | Nada |
-| Proteção do ramo | `scripts/github/apply-ruleset.sh` | O nome do check |
+| Proteção do ramo | `scripts/github/apply-ruleset.sh` | O nome do check, e a passagem de administrador, que sai |
 
 ## Skills
 
@@ -149,3 +149,10 @@ referência converge ou quando ela registra uma decisão diferente.
 | 10.5 | As primeiras contribuições entraram com passagem de administrador, sem revisão de outra pessoa |
 | 12.1 | Não existe a cerca que reprova serviço de produção sem imagem |
 | 13.5 | O repositório foi publicado antes da instalação real |
+| 10.5 (regra do ramo) | O script que aplica a regra dá passagem ao administrador da organização. Não o copie como está |
+
+**Ainda não medidos na referência.** Estes itens entraram na lista depois da última conferência
+e ninguém os mediu lá: 2.12 a 2.15, 3.5, 6.12 a 6.14, 7.9 a 7.11, 8.8 a 8.12, 10.12, 11.15 a
+11.19, 12.11 e 13.7 a 13.9. Três foram olhados por amostragem e não são cumpridos: o guia do
+implementador não trata de contrato (2.12), o guia de custos traz o método e não um número
+medido (2.15), e o instalador não confere a entrada do usuário criado (11.16).

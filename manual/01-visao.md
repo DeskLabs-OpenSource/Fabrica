@@ -16,19 +16,20 @@ perguntar a ninguém.
 
 ## Decisões do dono
 
-Só o dono responde. Sem elas, o construtor não começa.
+Só o dono responde. As duas primeiras antes de qualquer levantamento; as outras três na fase 3
+do método, com a evidência na mão.
 
 1. **Qual é a tese?** Uma frase sobre o resultado que o sistema entrega, e não sobre o canal ou
    a tecnologia.
-2. **Para quem?** Os três públicos, nesta ordem: quem usa, quem implementa para outros, quem
-   contribui.
+2. **Para quem?** Os três públicos do produto, nesta ordem: quem usa, quem implementa para
+   outros, quem contribui. (O quarto público do modelo, o parceiro, é do capítulo 02.)
 3. **O que seria fracasso, mesmo funcionando?**
 4. **Qual é a fronteira com cada produto irmão?**
 5. **O que fica fora para sempre**, por regra, e não por falta de tempo?
 
 ## As seções do `VISION.md`
 
-As sete primeiras existem nos dois produtos. As quatro seguintes só no segundo, e são as que
+As oito primeiras existem nos dois produtos. As quatro seguintes só no segundo, e são as que
 mais renderam.
 
 | Seção | O que responde |

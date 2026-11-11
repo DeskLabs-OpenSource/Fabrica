@@ -10,8 +10,8 @@ fase com o portão aberto, e não deduz o que é decisão do dono.
 
 ## Antes de tudo
 
-**Ache a Fábrica.** Ela está em `${FABRICA_HOME:-$HOME/.desklabs/fabrica}`. Se a pasta não
-existir, instale:
+**Ache a Fábrica.** Ela está em `${FABRICA_HOME:-$HOME/.desklabs/fabrica}`. Se você está lendo
+este arquivo de dentro de um clone dela, use esse clone. Se não há nenhum dos dois, instale:
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/DeskLabs-OpenSource/Fabrica/main/install.sh | bash
@@ -26,9 +26,18 @@ fundação concluída.
 2. `licoes.md`, inteiro. Não refaça esse levantamento.
 3. `conformidade.md`. É a régua pela qual o produto vai ser medido no fim.
 
-Os capítulos `manual/01` a `manual/12` você lê quando a fase pedir. Leia o capítulo inteiro, e
-não só o trecho que parece servir: no segundo produto, uma doutrina foi escrita sem ler o
-original e três leis ficaram de fora.
+Os capítulos `manual/01` a `manual/12` são leitura obrigatória, na fase indicada abaixo. Leia
+cada capítulo inteiro, e não só o trecho que parece servir: no segundo produto, uma doutrina foi
+escrita sem ler o original e três leis ficaram de fora.
+
+| Fase | Capítulos a ler antes de agir |
+|---|---|
+| 1 | 01 e 02 |
+| 2 | 03 e 09 |
+| 3 | 04, 07, 08, 10 e 12 (as seções "Decisões do dono" e "Decisões a registrar" de cada um) |
+| 5 | 04 a 12, inteiros, antes de construir a parte de cada um |
+| 8 | 11, de novo |
+| 10 | 10 e 12, de novo |
 
 **Baixe a referência,** só para leitura:
 
@@ -42,9 +51,11 @@ que ela tem configurado e nunca exercitou. Não copie essas partes.
 
 ## O estado da fundação
 
-Uma fundação atravessa muitas sessões. O estado mora no repositório do produto, em
+Uma fundação atravessa muitas sessões. O estado mora na pasta do produto, em
 `docs/fundacao/ESTADO.md`: uma linha por fase, com o portão, se está fechado e o caminho do
-artefato que o fecha. Crie o arquivo na fase 1 e atualize ao fechar cada portão.
+artefato que o fecha. Na fase 1, crie a pasta do produto, rode `git init` nela e crie o arquivo.
+O repositório fica só na máquina até a fase 10, a não ser que o dono peça um repositório
+privado antes.
 
 Se o arquivo já existe quando você é chamado, não recomece: leia, confira que os artefatos
 citados existem e continue da primeira fase aberta.
@@ -74,13 +85,16 @@ só os temas e as contagens.
 Pergunte só o que nenhuma pesquisa responde. Uma pergunta de cada vez, em linguagem simples:
 
 1. Que trabalho o sistema faz sozinho, e quem ganha com isso?
-2. Qual empresa este produto divulga? Qual o texto e o link da oferta? (Se o dono disser que é
-   a mesma dos outros produtos, confirme o link.)
-3. Em que organização do GitHub o repositório nasce, com que nome e licença?
+2. Qual empresa este produto divulga? Qual o texto e o link da oferta? Se o dono disser que é
+   a mesma dos produtos anteriores, pegue o texto e o link no README da referência e confirme
+   com ele. Se houver mais de um parceiro, anote o papel de cada um. Se o dono disser que não
+   há parceiro, registre isso: os itens de parceiro da conformidade ficam "não se aplica".
+3. Em que organização do GitHub o repositório vai morar, com que nome e licença?
 
-Aplique o teste de entrada do capítulo 02 à ideia, e diga ao dono o resultado. A última
-pergunta do teste é eliminatória: se o produto exigir o dono disponível todo dia, proponha uma
-versão mais simples antes de seguir.
+Aplique o teste de entrada do capítulo 02 à ideia, e diga ao dono o resultado. O teste é
+triagem, e não nota: um "não" nas quatro primeiras perguntas é dito ao dono com a consequência,
+e ele decide. A última é eliminatória: se manter o produto exigir o dono do projeto disponível
+todo dia, proponha uma versão mais simples antes de seguir.
 
 **Portão:** `docs/fundacao/entradas-do-dono.md`, com as respostas nas palavras do dono.
 
@@ -93,7 +107,8 @@ Quatro relatórios, mais um quinto se houver produto irmão. O primeiro já est�
 (`licoes.md`). Os outros:
 
 - **O que o público pede e do que reclama.** Pergunte ao dono onde está esse público e que
-  acesso você tem.
+  acesso você tem. Se o produto não tem antecessor, leia as issues e as avaliações de dois ou
+  três produtos que resolvem o mesmo problema, e marque o relatório como evidência indireta.
 - **A stack do domínio,** pelos critérios do capítulo 03, na ordem. Cada afirmação marcada como
   fato lido, estimativa ou não verificado, com a data.
 - **O que a lei e o mercado do domínio impõem.** As quatro perguntas de domínio do capítulo 09.
@@ -112,7 +127,13 @@ custo de cada opção e a sua recomendação. No mínimo:
 - a fronteira com cada produto irmão (capítulo 01, regra 6);
 - a peça central da stack (capítulo 03);
 - o que nasce desligado e em que condição se liga (capítulo 09);
-- uma instalação serve uma organização ou várias (capítulos 07 e 08).
+- uma instalação serve uma organização ou várias (capítulos 07 e 08);
+- a direção visual, em uma frase (capítulo 04);
+- quem mantém e quem revisa (capítulo 10);
+- haverá marca própria para quem revende (capítulo 02);
+- o nível de cada configuração: da instalação, da organização ou da unidade (capítulo 08).
+
+Onde o dono não tiver opinião, a sua recomendação vale e fica marcada como do construtor.
 
 Depois escreva `docs/fundacao/desenho.md` a partir de `modelos/desenho-da-fundacao.md`. Marque
 com **[dono]** só o que o dono decidiu de fato, e com **[construtor]** todo o resto.
@@ -137,17 +158,24 @@ aprovado.
 
 Na ordem:
 
-1. O repositório, na organização, com o documento de autoridade (`modelos/AGENTS-do-produto.md`),
-   os arquivos de contribuição, as cercas de toda fundação (capítulo 05) e a varredura de
-   segredo. Tudo isso antes da primeira linha de produto.
+1. O documento de autoridade (`modelos/AGENTS-do-produto.md`), os arquivos de contribuição, as
+   doutrinas (as herdadas e as do domínio, capítulo 09), as cercas de toda fundação
+   (capítulo 05) e a varredura de segredo. Tudo isso antes da primeira linha de produto.
 2. O núcleo: banco, porta única por organização, registro de eventos, fila.
 3. O caminho central do produto, com o modo simulado.
-4. O painel: saúde, configuração dos provedores, equipe, segurança.
-5. O kit de instalação.
-6. O CI inteiro e o corte de versão.
+4. O design system: direção, proibições com cerca, tokens (capítulo 04).
+5. O painel: saúde, configuração dos provedores, equipe, segurança (capítulos 06 e 08).
+6. O kit de instalação (capítulo 11).
+7. O CI inteiro, e os workflows de imagens e de corte de versão (capítulo 12). Eles ficam
+   escritos e entram em `nao-exercitado.md`: só rodam depois da publicação.
+8. As skills embutidas do produto e os guias: custos, implementador, primeira ação útil
+   (capítulos 02 e 10).
 
 Se construir em paralelo: territórios de arquivos que não se sobrepõem, só você faz commit, e
-quem implementa não verifica. Revisão de segurança a cada commit; no segundo achado sobre a
+quem implementa não verifica.
+
+Revisão de segurança a cada commit: use a revisão de segurança do seu assistente, se ele tem
+uma, ou dispare um agente só para isso com a diferença do commit. No segundo achado sobre a
 mesma peça, pare de remendar e escreva um registro de decisão.
 
 Mantenha `docs/fundacao/nao-exercitado.md`: tudo o que está configurado e ainda não rodou de
@@ -164,7 +192,8 @@ tela. Use o modo simulado para o que precisa de credencial.
 
 ### 7. Revisão fria
 
-Dispare um agente novo, sem o seu contexto. Entregue a ele o caminho do repositório,
+Dispare um agente novo, sem o seu contexto. Se o seu assistente não tem subagentes, peça ao
+dono para abrir outra sessão e colar o pedido. Entregue a ele o caminho do repositório,
 `conformidade.md` e a pergunta "você lançaria isto amanhã?". Não entregue as suas conclusões nem
 a lista do que você acha que está frágil.
 
@@ -177,9 +206,15 @@ Feche cada bloqueador. Depois **repita a fase 6**.
 
 ### 8. Instalação real
 
-Numa VPS, pelo caminho que o README ensina. Pergunte ao dono em que máquina. O ideal, que
-nenhum produto alcançou ainda: servidor recém-criado, caminho com perguntas no terminal, na VPS
-do parceiro **e** em outra.
+Numa VPS. Pergunte ao dono em que máquina. O ideal, que nenhum produto alcançou ainda: servidor
+recém-criado, caminho com perguntas no terminal, na VPS do parceiro **e** em outra.
+
+O repositório ainda não é público, então a linha única do README não funciona nesta fase. Leve
+o código para a VPS por cópia (um pacote do `git archive`, por exemplo) e rode o instalador a
+partir dali: é o mesmo instalador, e só a entrada de uma linha fica sem prova. Como ainda não
+há imagem publicada, construa as imagens na VPS com a saída de emergência do arquivo de
+composição. As duas coisas vão para `nao-exercitado.md`, e são as primeiras a exercitar depois
+da publicação.
 
 Gere as credenciais na máquina de destino. Não as escreva na conversa.
 
@@ -198,16 +233,23 @@ do escopo".
 
 ### 10. Publicação e devolução
 
-Antes do primeiro envio ao repositório público, cumpra a lista da fase 10 do método. Tornar o
-repositório público e cortar a primeira versão são atos do dono: peça a confirmação.
+Na ordem:
 
-Rode `fabrica-auditar` contra o produto e guarde o resultado.
+1. Rode `fabrica-auditar` contra o produto. **Item de nível F não conforme impede a
+   publicação.** As saídas: corrigir, registrar a decisão diferente, ou um pedido de decisão em
+   que o dono aceita publicar com o item aberto. "Não medido" é listado, e não impede.
+2. Cumpra a lista "antes do primeiro envio" da fase 10 do método.
+3. Criar o repositório público e cortar a primeira versão são atos do dono: peça a
+   confirmação. Ao criar, aplique a regra do ramo principal.
+4. Logo depois de publicar, exercite o que estava esperando: a linha única de instalação, a
+   publicação de imagens, o corte da primeira versão, a instalação a partir da imagem
+   publicada. Cada um sai de `nao-exercitado.md` quando rodar.
+5. A devolução. Clone a Fábrica numa pasta de trabalho separada (nunca edite a cópia instalada
+   em `~/.desklabs/fabrica`: a atualização dela deixaria de funcionar). Escreva as lições novas
+   em `licoes.md`, no formato das outras, e abra uma contribuição. Onde o produto decidiu
+   diferente do manual por uma razão melhor, proponha a mudança no capítulo.
 
-Por fim, a devolução: escreva as lições novas em `licoes.md` da Fábrica, no formato das outras,
-e abra uma contribuição no repositório da Fábrica. Onde o produto decidiu diferente do manual
-por uma razão melhor, proponha a mudança no capítulo.
-
-**Portão:** a contribuição de devolução aberta.
+**Portão:** o produto público, com a primeira versão, e a contribuição de devolução aberta.
 
 ## O que você não faz
 

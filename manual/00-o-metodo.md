@@ -178,7 +178,9 @@ A lista de [`conformidade.md`](../conformidade.md) é o roteiro dela.
 
 ### 8. Instalação real
 
-Instala-se numa VPS, pelo caminho que o README ensina.
+Instala-se numa VPS, pelo instalador do produto. O repositório ainda não é público nesta fase,
+então o código vai para a máquina por cópia, e a linha única do README fica para ser exercitada
+logo depois da publicação.
 
 No segundo produto, essa instalação achou um defeito que nenhum levantamento, teste ou revisão
 previu: um serviço não conseguia ler o que o instalador gravava. A causa imediata foi o próprio
@@ -212,15 +214,26 @@ como criar uma conta nem como incluir a equipe.
 
 ### 10. Publicação e devolução
 
+**A auditoria.** O produto é medido contra [`conformidade.md`](../conformidade.md). Item de
+fundação não conforme impede a publicação, a não ser que vire uma decisão registrada ou que o
+dono aceite, por escrito, publicar com ele aberto.
+
 **Antes do primeiro envio ao repositório público:**
 
 - varredura de segredo, de caminho da máquina local e de endereço de e-mail em todo o
   histórico;
 - conferência da identidade de cada commit;
+
+**Ao publicar:**
+
 - regra do ramo principal, time de mantenedores, discussões e canal de relato privado de
   vulnerabilidade;
 - o que o agente não consegue fazer fica numa lista para o dono. No segundo produto, uma
   permissão da organização exigia um nível de acesso que o agente não tinha.
+
+**Logo depois de publicar,** exercita-se o que só funciona em público: a linha única de
+instalação, a publicação das imagens, o corte da primeira versão e uma instalação a partir da
+imagem publicada.
 
 **No primeiro dia de público,** o robô de dependências abre contribuições propondo versões
 maiores. Tenha a regra pronta: o piso declarado de cada dependência vale.
