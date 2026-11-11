@@ -256,3 +256,25 @@ O **nível** diz quando o item passa a valer:
 | 13.7 | Um caminho de ponta a ponta foi executado pelas entradas reais, antes e depois da revisão fria | Registro | F |
 | 13.8 | O dono usou o produto, e o que ele não conseguiu fazer está escrito | Arquivo | F |
 | 13.9 | Existe a lista do que está configurado e ainda não foi exercitado | Arquivo | F |
+
+## 14. Site — capítulo 13
+
+Todos de nível C: valem quando o produto tem site. Antes disso, a seção inteira é "não se
+aplica", e o desenho da fundação diz quando o site entra.
+
+| Nº | Exigência | Como conferir | Nível |
+|---|---|---|---|
+| 14.1 | O site mora em repositório separado do produto | Comando | C |
+| 14.2 | As notas de versão são lidas do produto, e a página falha alto se a leitura falhar | Leitura | C |
+| 14.3 | O corte de versão do produto reprova se a versão não aparecer no site | Leitura do workflow | C |
+| 14.4 | Os comandos e requisitos da página de instalar são os do kit, por leitura, geração ou teste de paridade | Arquivo: o teste, ou o gerador | C |
+| 14.5 | Toda skill do produto tem entrada na página de guias, por geração ou teste de paridade | Arquivo: o teste, ou o gerador | C |
+| 14.6 | Todo conteúdo copiado do produto tem teste de paridade rodando no CI do site | Leitura do CI | C |
+| 14.7 | Números sociais são lidos da fonte | Leitura | C |
+| 14.8 | A data de atualização vem de uma constante só | Comando: busca | C |
+| 14.9 | O conteúdo está no texto servido, sem depender de script | Execução: a página com scripts desligados | C |
+| 14.10 | Existe o arquivo de resumo para assistentes, com o passo zero | Arquivo | C |
+| 14.11 | O parceiro aparece declarado, com marcação de link patrocinado e o mesmo endereço do repositório | Leitura | C |
+| 14.12 | Os idiomas têm a mesma estrutura, obrigada por tipo e por teste | Arquivo: o teste | C |
+| 14.13 | Existe o contrato de marca do site | Arquivo | C |
+| 14.14 | O curso é capturado do aplicativo real, com dados fictícios, procedência por foto e recibo de publicação | Leitura do roteiro e do recibo | C: quando houver curso |

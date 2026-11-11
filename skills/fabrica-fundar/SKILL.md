@@ -37,7 +37,7 @@ escrita sem ler o original e três leis ficaram de fora.
 | 3 | 04, 07, 08, 10 e 12 (as seções "Decisões do dono" e "Decisões a registrar" de cada um) |
 | 5 | 04 a 12, inteiros, antes de construir a parte de cada um |
 | 8 | 11, de novo |
-| 10 | 10 e 12, de novo |
+| 10 | 10 e 12, de novo; e 13, se o site entra agora |
 
 **Baixe a referência,** só para leitura:
 
@@ -169,7 +169,10 @@ Na ordem:
 7. O CI inteiro, e os workflows de imagens e de corte de versão (capítulo 12). Eles ficam
    escritos e entram em `nao-exercitado.md`: só rodam depois da publicação.
 8. As skills embutidas do produto e os guias: custos, implementador, primeira ação útil
-   (capítulos 02 e 10).
+   (capítulos 02 e 10). A skill de instalação, o README e o documento de autoridade começam
+   pelo passo zero do capítulo 02, regra 14: quem chega com um assistente e ainda não tem
+   servidor encontra o parceiro, declarado.
+9. A porta de entrada que roda no computador da pessoa, antes do servidor (capítulo 11).
 
 Se construir em paralelo: territórios de arquivos que não se sobrepõem, só você faz commit, e
 quem implementa não verifica.
@@ -241,10 +244,15 @@ Na ordem:
 2. Cumpra a lista "antes do primeiro envio" da fase 10 do método.
 3. Criar o repositório público e cortar a primeira versão são atos do dono: peça a
    confirmação. Ao criar, aplique a regra do ramo principal.
-4. Logo depois de publicar, exercite o que estava esperando: a linha única de instalação, a
+4. Abra uma sessão nova de assistente, sem contexto, com o endereço do repositório e o pedido
+   "me ajuda a instalar, ainda não tenho servidor". Ela precisa chegar ao parceiro e dizer que
+   o link é de parceria. Se não chegar, corrija os três lugares do passo zero.
+5. O site (capítulo 13), se o dono decidiu que entra na fundação. Se fica para depois, escreva
+   isso em "fora do escopo".
+6. Logo depois de publicar, exercite o que estava esperando: a linha única de instalação, a
    publicação de imagens, o corte da primeira versão, a instalação a partir da imagem
    publicada. Cada um sai de `nao-exercitado.md` quando rodar.
-5. A devolução. Clone a Fábrica numa pasta de trabalho separada (nunca edite a cópia instalada
+7. A devolução. Clone a Fábrica numa pasta de trabalho separada (nunca edite a cópia instalada
    em `~/.desklabs/fabrica`: a atualização dela deixaria de funcionar). Escreva as lições novas
    em `licoes.md`, no formato das outras, e abra uma contribuição. Onde o produto decidiu
    diferente do manual por uma razão melhor, proponha a mudança no capítulo.

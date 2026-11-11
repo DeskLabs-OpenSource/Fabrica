@@ -59,7 +59,7 @@ sentido para o seu projeto, a resposta é "não se aplica", com o motivo.
 | Caminho | O que é |
 |---|---|
 | [`manual/00-o-metodo.md`](manual/00-o-metodo.md) | As dez fases de uma fundação, das entradas do dono à publicação |
-| `manual/01` a `manual/12` | Um capítulo por área: o que decidir, as regras, como cobrar, como saber que ficou pronto |
+| `manual/01` a `manual/13` | Um capítulo por área: o que decidir, as regras, como cobrar, como saber que ficou pronto |
 | [`licoes.md`](licoes.md) | O catálogo de erros medidos e a regra que cada um gerou |
 | [`conformidade.md`](conformidade.md) | A lista que diz se um produto segue a Fábrica, item por item, com o jeito de conferir |
 | [`referencia.md`](referencia.md) | Onde ver cada mecânica funcionando, e o que a referência ainda não cumpre |
@@ -84,6 +84,7 @@ sentido para o seu projeto, a resposta é "não se aplica", com o motivo.
 | 10 | Contribuição | Regras e mecanismo |
 | 11 | Instalação | Regras e mecanismo |
 | 12 | Distribuição | Regras e mecanismo |
+| 13 | Site | Método |
 
 ## O que não tem aqui, de propósito
 

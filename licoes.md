@@ -200,3 +200,16 @@ Erros do P1 que os capítulos 04, 06 e 08 narram.
 | M9 | Um papel de suporte "só leitura" conseguia escrever, porque as rotas conferiam o papel e não o escopo | O poder de instalação tem escopo, conferido em toda rota de escrita | Verificação | — |
 | M10 | Telas existiam e não tinham porta no menu | A lista de telas vem do disco, e um teste a amarra ao menu | Teste | — (a referência não tem) |
 | M11 | O banco de teste não reproduzia as permissões do banco real, e funções internas ficavam alcançáveis com o teste verde | A prova de isolamento roda com o papel e as permissões do banco real | Teste | `packages/core/test/isolation.db.test.ts` |
+
+## N. Site e material de ensino
+
+Do site do P1. O que está em "Onde ver" fica no repositório do site dele, e não na referência.
+
+| Nº | O que aconteceu | Regra | Como se cobra | Onde ver |
+|---|---|---|---|---|
+| N1 | A página de apresentação moraria na raiz do aplicativo, e toda instalação de revendedor a serviria aos clientes dele | O site mora em repositório separado | Conformidade 14.1 | — |
+| N2 | A página de guias era cópia manual da pasta de skills, e ficou listando menos guias do que o produto tinha | O que pode vir da fonte, vem da fonte. Toda cópia tem teste de paridade | Conformidade 14.5, 14.6 | — |
+| N3 | A página de instalar foi conferida contra o kit numa data fixa, e o mesmo comando aparecia escrito de dois jeitos no site | Os comandos da página são os do kit, por leitura, geração ou teste | Conformidade 14.4 | — |
+| N4 | As notas de versão, lidas do arquivo do produto, nunca ficaram atrás. E o corte de versão confere que a versão apareceu no site | Página lida da fonte, e o corte confere a consequência | Conformidade 14.2, 14.3 | — |
+| N5 | A data de atualização da página inicial era fixa num componente e ficou meses atrás | Uma data, de uma constante só | Conformidade 14.8 | — |
+| N6 | O curso capturado do aplicativo real, com dados fictícios e recibo de publicação, foi o material mais elogiado. Produzi-lo ainda achou defeitos de uso | Curso por captura do aplicativo real, com procedência por foto | Conformidade 14.14 | — |
