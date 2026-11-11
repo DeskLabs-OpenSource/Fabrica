@@ -163,6 +163,7 @@ Lições da própria fundação do P2. Nenhuma tem cerca: são cobradas pelo mé
 | K15 | Uma capacidade nova gastava com provedor e só tinha teto por unidade. Um usuário logado podia abrir quantas unidades quisesse em paralelo | Todo gasto com provedor tem teto somado, além do teto por unidade | Conformidade 2.16 | — |
 | K16 | Nasceu o estado "pessoa desativada". A entrada passou a respeitá-lo, e os lugares que escolhiam para quem mandar aviso não: quem saiu continuaria recebendo dados | Um estado que tira o acesso de alguém é conferido em todo lugar que escolhe pessoas, e não só na entrada | Busca por toda consulta à tabela de pessoas; conformidade 6.15 | — |
 | K17 | Uma capacidade nova chegou por uma segunda porta. Quem acessava por túnel só tinha redirecionado a primeira, e a tela disse "confira sua internet" | O que o navegador usa chega por uma origem só. Porta a mais é um passo a mais em cada modo de instalação (proxy, túnel, firewall), e cada passo é um lugar para falhar em silêncio | Conformidade 11.23 | — |
+| K18 | Na primeira instalação do zero contra a versão publicada, a opção "painel só local" foi ignorada em silêncio porque as portas estavam livres, o valor passado nem foi validado, e o instalador anunciou um endereço que de fora não respondia | Opção sem efeito no modo em que foi passada é erro, e não silêncio. O instalador anuncia o endereço que testou | Conformidade 11.25 | — |
 
 ## L. O que a comunidade ensinou
 

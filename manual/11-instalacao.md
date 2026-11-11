@@ -161,6 +161,17 @@ Dentro da VPS, o instalador não oferece o parceiro a quem já está instalando:
 servidor. No máximo uma linha no fim, e só quando há certeza de que a máquina é de outro
 provedor (capítulo 02, regra 4).
 
+### 20. Opção que o instalador não vai obedecer, ele recusa
+
+Uma opção passada num modo em que ela não tem efeito para a instalação com erro, nomeando a
+opção e o modo. O valor é validado em todo modo, e não só naquele em que é usado. No segundo
+produto, quem pediu o painel só local numa máquina com as portas livres teve a opção ignorada em
+silêncio, e o painel foi publicado para fora: a opção só existia para o caso de as portas
+serem de outro proxy.
+
+O endereço que o instalador anuncia no fim é o que ele testou. Se a porta está publicada e não
+foi alcançada de fora, a mensagem diz isso em vez de dar o endereço como certo.
+
 ### 13. O instalador termina provando que a pessoa entra
 
 A última coisa que o instalador faz é conferir que a tela de entrada abre e aceita o usuário

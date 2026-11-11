@@ -232,6 +232,7 @@ O **nível** diz quando o item passa a valer:
 | 11.22 | Sem domínio, o padrão do instalador não publica a tela de entrada sem conexão segura | Leitura; teste do kit | F |
 | 11.23 | Tudo o que o navegador usa chega pela mesma origem do painel. Se houver uma segunda porta, a tela testa o alcance dela e nomeia o que falta | Leitura do proxy e do instalador; teste de tela | F |
 | 11.24 | Existe uma entrada que roda no computador da pessoa, antes do servidor: o que é preciso, o tamanho da máquina, o parceiro declarado, o comando seguinte | Arquivo; execução | F |
+| 11.25 | Opção passada num modo em que não tem efeito para a instalação com erro; o valor é validado em todo modo; o endereço anunciado no fim é o que foi testado | Teste do kit: a opção em cada modo; leitura da mensagem final | F |
 
 ## 12. Distribuição — capítulo 12
 
