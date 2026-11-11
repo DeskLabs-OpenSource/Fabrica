@@ -135,6 +135,28 @@ Muitas VPS já têm um proxy reverso. O instalador detecta e usa um arquivo de c
 adicional. Todo comando posterior carrega os dois arquivos; o kit faz isso por uma função só,
 para ninguém esquecer.
 
+### 13. O instalador termina provando que a pessoa entra
+
+A última coisa que o instalador faz é conferir que a tela de entrada abre e aceita o usuário
+que ele acabou de criar. É a regra 3 levada até o fim: na comunidade do primeiro produto, o
+relato era "a instalação conclui e a tela de login nunca abre".
+
+### 14. Os ambientes suportados são declarados
+
+O README diz em que ambientes a instalação é provada. Para os outros (outro painel de
+hospedagem, máquina local, outra arquitetura), diz o que se sabe e o que fazer. Quem instala
+fora do caminho único não fica sem saída.
+
+### 15. O que foi pulado na instalação tem lugar na tela
+
+Se a pessoa pulou uma credencial ou uma resposta, existe um lugar evidente no painel para
+informar depois.
+
+### 16. O padrão do instalador sustenta produção
+
+Nenhum padrão do instalador aponta para um recurso que não aguenta uso real sem dizer isso na
+mesma tela (capítulo 02, regra 13).
+
 ## Como o kit é provado
 
 | Nível | O que prova | O que não prova |

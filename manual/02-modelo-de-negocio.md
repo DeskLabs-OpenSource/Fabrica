@@ -157,6 +157,33 @@ Os três convivem. Nenhum deles vira cobrança de licença, porque isso contrari
 Se o produto oferece cobrança para o revendedor, ela mora no núcleo, desligada por padrão e
 falhando fechada. Fora do núcleo, a atualização a apagaria.
 
+### 12. O kit de quem revende nasce com o produto
+
+A comunidade do primeiro produto mostrou onde quem revende trava, e não é no código:
+
+- quanto cobrar, e o que entra na implantação;
+- quem paga o provedor de IA, e como prever o gasto de um cliente antes de fechar;
+- alguém já usa isto com cliente de verdade?;
+- contrato;
+- a máquina recomendada basta para quantos clientes;
+- como dar acesso ao cliente sem ele mexer em servidor;
+- a quem recorrer.
+
+O guia do implementador responde cada uma. Sobre preço, a regra 9 continua valendo: o guia dá
+o método para chegar ao número e o piso de custo, e não uma tabela.
+
+Dois itens só existem depois do lançamento, e por isso têm dono e data: um caso real
+documentado, e o que é ou não suportado em produção.
+
+### 13. O custo real do caminho recomendado é publicado
+
+Antes do lançamento, mede-se quanto custa por mês rodar o produto pelo caminho que o README
+recomenda, em uso de verdade, e onde cada limite gratuito acaba. O padrão do instalador
+sustenta produção; onde não sustenta, diz isso na mesma tela.
+
+*O erro:* o caminho recomendado do primeiro produto usava a camada gratuita de um serviço que
+não aguentava uso real, e quem descobria já tinha cliente dentro.
+
 ## Como saber que ficou pronto
 
 - O bloco do parceiro está no README antes do comando de instalação, e diz que qualquer VPS

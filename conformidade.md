@@ -49,6 +49,9 @@ O **nível** diz quando o item passa a valer:
 | 2.9 | Existe guia do implementador | Arquivo | F |
 | 2.10 | Todo custo de provedor aparece na tela e respeita um teto do operador | Execução | F |
 | 2.11 | Marca própria é configuração em tempo de execução e sobrevive à atualização | Execução | C: quando houver revenda com marca |
+| 2.12 | O guia do implementador responde: quanto cobrar (método), quem paga os provedores, como prever o gasto, contrato, capacidade da máquina, acesso do cliente, a quem recorrer | Leitura | F |
+| 2.13 | O custo mensal real do caminho recomendado foi medido e está publicado | Leitura do guia de custos | F |
+| 2.14 | Há um caso real documentado, e a lista do que é suportado em produção | Arquivo | C: depois do primeiro uso real |
 
 ## 3. Stack — capítulo 03
 
@@ -135,6 +138,10 @@ O **nível** diz quando o item passa a valer:
 | 8.5 | Ação destrutiva pede confirmação nomeando o alvo | Execução | F |
 | 8.6 | Gestão de equipe e papéis pela tela | Execução | F |
 | 8.7 | Painel da instalação separado, com escopo de leitura e de escrita | Execução | C: quando a instalação servir mais de uma organização |
+| 8.8 | Toda proteção ligada por padrão se anuncia na tela onde a pessoa espera o resultado | Execução, numa instalação nova | F |
+| 8.9 | Tela vazia diz por quê; erro nomeia o item que falta | Execução | F |
+| 8.10 | Cada integração externa tem teste de conexão que diz o pré-requisito que falta, e guia que cobre o lado do terceiro | Execução; arquivo | F |
+| 8.11 | O nível de cada configuração (instalação, organização, unidade) está decidido e escrito | Leitura do desenho | F |
 
 ## 9. Doutrinas — capítulo 09
 
@@ -166,6 +173,7 @@ O **nível** diz quando o item passa a valer:
 | 10.9 | O modelo de contribuição diz o que é trabalho do projeto | Leitura | F |
 | 10.10 | Fonte das skills em pasta neutra; espelhos gerados e conferidos | Arquivo: a cerca | F |
 | 10.11 | Procedimento de triagem com medidor, reprodutor e cético | Arquivo | C: quando a fila passar do que os mantenedores leem |
+| 10.12 | Está publicado quem responde, em quanto tempo e por qual canal | Leitura | F |
 
 ## 11. Instalação — capítulo 11
 
@@ -185,6 +193,9 @@ O **nível** diz quando o item passa a valer:
 | 11.12 | A versão em execução se vê de fora | Execução | F |
 | 11.13 | Instalado na VPS do parceiro **e** em outra | Registro com evidência | F |
 | 11.14 | Erro do kit diz a causa e o próximo comando | Leitura | F |
+| 11.15 | Nenhum padrão do instalador aponta para recurso que não sustenta produção sem avisar | Leitura | F |
+| 11.16 | O instalador termina conferindo que a tela de entrada aceita o usuário criado | Execução | F |
+| 11.17 | O README declara os ambientes em que a instalação é provada, e o que fazer nos outros | Leitura | F |
 
 ## 12. Distribuição — capítulo 12
 
@@ -200,6 +211,7 @@ O **nível** diz quando o item passa a valer:
 | 12.8 | "Exige ação" é um bloco do fragmento, com o passo exato | Leitura | F |
 | 12.9 | Versão cortada inteira pelo CI, com o ramo principal verde | Execução | F |
 | 12.10 | Documentação e tela nos idiomas declarados | Leitura | F |
+| 12.11 | O "como fazer" mora no repositório e é conferido a cada versão | Leitura | F |
 
 ## 13. Método — capítulo 00
 

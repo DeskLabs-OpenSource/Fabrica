@@ -143,6 +143,17 @@ Regras:
 - **Aviso de segurança sai junto com a versão corrigida,** com uma forma de quem opera conferir
   se foi afetado.
 
+## Documentação de uso
+
+**Vídeo divulga; a documentação mora no repositório.** O "como fazer" é escrito, conferido
+contra o produto a cada versão, e todo vídeo aponta para ele.
+
+*O erro:* no primeiro produto o vídeo era a documentação, e envelhecia mais rápido que o
+produto. A tela mudava depois do vídeo, e "faltou esse pedaço no vídeo" virou resposta padrão.
+
+O material mais elogiado pela comunidade foi um curso navegável, que se percorre em vez de só
+assistir. Ele é gerado a partir do produto, e por isso acompanha as versões.
+
 ## Idiomas
 
 Documentação e tela nascem na língua do público principal, com tradução para as outras que o

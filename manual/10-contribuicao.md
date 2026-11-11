@@ -162,6 +162,20 @@ para manter um repositório com milhares de contribuições. Um projeto que nasc
 bastam as regras de produto, o pedido de decisão e os três papéis. A máquina se monta quando a
 fila mostrar que precisa.
 
+## Suporte é decisão escrita
+
+Antes do lançamento, o projeto decide e publica: quem responde, em quanto tempo, por qual
+canal. "Ninguém, e este é o caminho" é uma resposta válida, desde que escrita.
+
+*O erro:* o espaço da comunidade do primeiro produto abriu dizendo que não havia suporte.
+Perguntas ficaram semanas sem resposta, e quem resolvia eram dois ou três membros.
+
+- Pergunta sem resposta no prazo declarado tem dono.
+- **Dúvida repetida três vezes é defeito de produto,** e vira issue.
+- **O ciclo curto é o que mais rende:** pedido pequeno, atendido em dias, com crédito a quem
+  pediu.
+- Membros que ajudam membros são um ativo, e um risco se forem o único suporte.
+
 ## Segurança
 
 - Vulnerabilidade se relata em privado.

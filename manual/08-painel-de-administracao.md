@@ -122,6 +122,38 @@ só libera depois de a pessoa ver.
 A tela de saúde mostra cada peça e cada ligação entre peças. Um verde geral esconde a peça que
 está de pé e desconectada (capítulo 11).
 
+### 10. Nada bloqueia em silêncio
+
+Toda proteção ligada por padrão se anuncia na tela onde a pessoa espera o resultado: o que está
+bloqueando e onde liberar.
+
+*O erro:* "configurei tudo e não acontece nada" foi a dúvida que mais voltou na comunidade do
+primeiro produto. Um modo de teste vinha ligado de fábrica e ninguém era avisado. Gente
+experiente concluiu que o produto não funcionava.
+
+### 11. Tela vazia explica o vazio; erro nomeia o que falta
+
+Uma tela sem dados diz por que está sem dados e o que fazer. Uma mensagem de erro diz qual item
+falta, e não a lista de tudo o que poderia faltar. Nunca se culpa a rede por uma opção
+desligada.
+
+### 12. A tela de conexão testa o pré-requisito
+
+Integração com serviço de fora tem um botão de teste, e a resposta diz qual pré-requisito do
+lado de lá falta: uma aprovação, um plano, um modo de teste. Não se repassa o erro cru do
+fornecedor.
+
+### 13. Recurso achável pela pergunta de quem usa
+
+Um recurso só está pronto quando a pessoa o encontra pela pergunta que faria, na língua dela.
+Se a mesma dúvida chega três vezes, o defeito é de descoberta, e vira item de produto.
+
+### 14. Listas para dez vezes o exemplo, e o nível de cada ajuste decidido cedo
+
+Cada lista é desenhada para dez vezes o volume do exemplo. E cada configuração tem o nível
+decidido na fundação: da instalação, da organização ou da unidade (um agente, um plano). Mover
+de nível depois é caro, e foi um dos pedidos mais repetidos no primeiro produto.
+
 ## Como saber que ficou pronto
 
 - Uma tela nova sem entrada no menu é reprovada.
