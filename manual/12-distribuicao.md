@@ -114,6 +114,17 @@ forçaria uma versão maior que ninguém queria cortar.
 Antes disso vale a regra do capítulo 11: uma atualização não deveria pedir ação. Se pede, vira
 um pedido de decisão com plano de migração.
 
+### A primeira versão não pede ação a ninguém
+
+Antes da primeira versão não existe instalação a atualizar. Os fragmentos escritos durante a
+fundação que diziam "quem já instalou precisa..." falam de instalações de teste. No primeiro
+corte eles entram como mudança comum, e a nota da versão não sai com o aviso de "requer
+atenção".
+
+*O erro:* a primeira versão do segundo produto foi publicada com o título "requer atenção antes
+de atualizar" e três instruções para quem já tinha instalado. Era a primeira coisa que quem
+chegava ao repositório lia.
+
 ### O fragmento é escrito para quem opera
 
 Um parágrafo, na voz de quem usa e nunca viu o código, terminando com o crédito a quem fez. O

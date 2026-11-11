@@ -83,6 +83,7 @@ também entra na lista "o que o CI não vê" do produto.
 | E16 | P2: o instalador escolhia a última versão publicada e baixava as imagens dela, mas quem tinha clonado à mão ficava com o código do topo do ramo principal | O código instalado é o da etiqueta da versão, em todo caminho de instalação | Conformidade 12.3 | — |
 | E17 | P2: o passo que cria a etiqueta olhava só o último envio, e a fila de execuções guardava uma pendente por vez. Um envio logo depois do corte faria a versão nunca virar etiqueta, sem aviso | O corte decide pelo commit que mudou a versão nas notas | Conformidade 12.17 | — |
 | E18 | P2: as duas arquiteturas construíam no mesmo passo, uma delas por emulação e com tempo máximo. Se ela estourasse, nenhuma seria publicada, com a etiqueta já criada | Uma arquitetura por job | Revisão | — |
+| E19 | P2: a primeira versão saiu com o título "requer atenção antes de atualizar" e instruções para quem já tinha instalado, quando não havia instalação nenhuma além da de teste | Na primeira versão, nenhum fragmento pede ação: não há quem atualize | Revisão do pedido de versão, antes do merge | — |
 
 ## F. Sistema vivo
 
