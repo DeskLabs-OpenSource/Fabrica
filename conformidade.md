@@ -256,6 +256,7 @@ O **nível** diz quando o item passa a valer:
 | 12.16 | As imagens publicadas baixam sem credencial, numa máquina que nunca entrou no registro | Execução | L |
 | 12.17 | O passo que cria a etiqueta decide pelo commit que mudou a versão nas notas, e não depende de ser o último envio ao ramo principal | Leitura do workflow | L |
 | 12.18 | A página da versão só é publicada depois de as imagens baixarem sem credencial | Leitura do workflow | L |
+| 12.19 | Quando a atualização troca um arquivo de configuração montado num contêiner, ela reinicia esse contêiner, na ida e na volta | Teste do kit contando o reinício nos dois caminhos; numa instalação real, a configuração em uso é a nova | F |
 
 ## 13. Método — capítulo 00
 
