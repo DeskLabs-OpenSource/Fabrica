@@ -37,7 +37,7 @@ escrita sem ler o original e três leis ficaram de fora.
 | 3 | 04, 07, 08, 10 e 12 (as seções "Decisões do dono" e "Decisões a registrar" de cada um) |
 | 5 | 04 a 12, inteiros, antes de construir a parte de cada um |
 | 8 | 11, de novo |
-| 10 | 10 e 12, de novo; e 13, se o site entra agora |
+| 10 | 10 e 12, de novo; 13 e 14 |
 
 **Baixe a referência,** só para leitura:
 
@@ -247,17 +247,21 @@ Na ordem:
 4. Abra uma sessão nova de assistente, sem contexto, com o endereço do repositório e o pedido
    "me ajuda a instalar, ainda não tenho servidor". Ela precisa chegar ao parceiro e dizer que
    o link é de parceria. Se não chegar, corrija os três lugares do passo zero.
-5. O site (capítulo 13), se o dono decidiu que entra na fundação. Se fica para depois, escreva
-   isso em "fora do escopo".
-6. Logo depois de publicar, exercite o que estava esperando: a linha única de instalação, a
+5. Logo depois de publicar, exercite o que estava esperando: a linha única de instalação, a
    publicação de imagens, o corte da primeira versão, a instalação a partir da imagem
    publicada. Cada um sai de `nao-exercitado.md` quando rodar.
-7. A devolução. Clone a Fábrica numa pasta de trabalho separada (nunca edite a cópia instalada
+6. A devolução. Clone a Fábrica numa pasta de trabalho separada (nunca edite a cópia instalada
    em `~/.desklabs/fabrica`: a atualização dela deixaria de funcionar). Escreva as lições novas
    em `licoes.md`, no formato das outras, e abra uma contribuição. Onde o produto decidiu
    diferente do manual por uma razão melhor, proponha a mudança no capítulo.
 
-**Portão:** o produto público, com a primeira versão, e a contribuição de devolução aberta.
+7. O que falta para divulgar. É a tabela "o que todo produto tem na divulgação", do capítulo
+   00, e são os itens de nível L da conformidade: a atualização pela tela, o site, a
+   identidade, a equipe de agentes que mantém o projeto (capítulo 14). Meça de novo com
+   `fabrica-auditar`. Divulgar é ato do dono.
+
+**Portão:** o produto público, com a primeira versão, os itens de nível L conformes ou
+decididos, e a contribuição de devolução aberta.
 
 ## O que você não faz
 

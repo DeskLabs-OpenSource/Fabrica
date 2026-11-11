@@ -76,6 +76,9 @@ também entra na lista "o que o CI não vê" do produto.
 | E9 | P2: um comando chamado pelo instalador falhava de um jeito que o teste da função não via | O que o instalador chama é testado pela linha de comando | Teste do auxiliar; o comando real ainda só foi provado à mão | `apps/routines/src/cli/args.test.ts` |
 | E10 | P2: os testes do instalador usavam um substituto do Docker, exatamente onde o defeito de E7 morava. O caminho que grava, sobe e cria o usuário só rodava numa instalação real | O CI roda o instalador de verdade num ambiente descartável, e a primeira instalação real é fase obrigatória | Conformidade 11.21; método | `manual/00-o-metodo.md`, fase 8 |
 | E11 | P2: a versão gravada pelo atualizador e a etiqueta publicada pelo CI tinham formatos diferentes. A atualização nunca usava a imagem publicada | O nome da imagem e o formato da etiqueta têm uma fonte só, lida pelos dois lados | Teste (a referência contornou publicando os dois formatos) | — |
+| E12 | Um pedido de atualização pela tela foi aceito pelo agente do servidor e nunca concluído. Ficou preso para sempre, e nenhum pedido novo podia ser feito | Um pedido por vez, com prazo. Pedido aceito e não concluído vira falha visível | Conformidade 12.14 | — |
+| E13 | O agente de atualização falhava ao falar com o aplicativo sem deixar rastro. O sintoma era "o botão de atualizar não aparece" | Falha de comunicação do agente fica num registro que persiste | Conformidade 12.15 | — |
+| E14 | Quem instala não atualizava, porque atualizar pedia terminal | Atualização pela tela, com o aplicativo só registrando o pedido e um agente do kit executando | Conformidade 12.12, 12.13 | — |
 
 ## F. Sistema vivo
 

@@ -11,8 +11,9 @@
 - O resultado de cada item é um de cinco: **conforme**, **não conforme**, **não se aplica**
   (com o motivo), **decidido diferente** (com o registro de decisão), **não medido** (com o que
   faltou para medir).
-- Item de nível F **não conforme** impede a publicação. As saídas são corrigir, registrar a
-  decisão, ou o dono aceitar por escrito publicar com ele aberto.
+- Item de nível F **não conforme** impede a publicação, e item de nível L impede a divulgação.
+  As saídas são corrigir, registrar a decisão, ou o dono aceitar por escrito seguir com ele
+  aberto.
 - "Decidido diferente" é resposta legítima. A Fábrica exige a decisão escrita, e não a
   obediência. O que ela não aceita é a divergência sem motivo.
 - Onde o jeito de conferir é "teste de tela, ou execução", o teste vale mais: ele prova a
@@ -22,7 +23,10 @@
 
 O **nível** diz quando o item passa a valer:
 
-- **F**: fundação. Vale antes da publicação.
+- **F**: fundação. Vale antes de o código ir a público.
+- **L**: lançamento. Vale antes de o produto ser divulgado. Entre a publicação do código e a
+  divulgação, o produto ganha o que só existe em público: a primeira versão, a atualização
+  entre versões, o site, a equipe que o mantém.
 - **C**: crescimento. Vale quando a condição escrita no item aparecer.
 
 ---
@@ -84,6 +88,8 @@ O **nível** diz quando o item passa a valer:
 | 4.5 | Fontes versionadas no repositório; a construção não baixa de serviço externo | Leitura | F |
 | 4.6 | Texto de tela só em dicionário, nos idiomas declarados | Arquivo: a cerca | F |
 | 4.7 | O dono validou a direção | Registro | F |
+| 4.8 | Existe a pasta de marca, com a marca completa, o símbolo e a imagem de capa, em vetor, para fundo claro e escuro | Arquivo | L |
+| 4.9 | O README, o site e o painel usam os arquivos da pasta de marca, e o repositório tem imagem de capa | Leitura; comando | L |
 
 ## 5. Engenharia — capítulo 05
 
@@ -103,7 +109,7 @@ O **nível** diz quando o item passa a valer:
 | 5.12 | Check de contribuição só mede o que ela mudou; estado acumulado é do ramo principal | Leitura dos workflows | F |
 | 5.13 | Cada job do CI que pode reprovar uma contribuição tem o passo que diz se a causa está nela ou fora | Leitura dos workflows | F |
 | 5.14 | O CI cria o banco do zero, só pelas migrations | Leitura do workflow | F |
-| 5.20 | O CI atualiza a partir da última versão publicada, com dados, e esse passo já rodou | Execução | C: depois da primeira versão publicada |
+| 5.20 | O CI atualiza a partir da última versão publicada, com dados, e esse passo já rodou | Execução | L |
 | 5.21 | O painel tem testes que dirigem o navegador nos caminhos de primeira impressão: entrar, configurar, a primeira ação útil | Arquivo: os testes | F |
 | 5.15 | O caminho central roda de ponta a ponta sem credencial, num job do CI | Leitura do workflow: o job e o teste que ele roda | F |
 | 5.16 | As imagens constroem **e sobem** no CI | Leitura do workflow | F |
@@ -210,7 +216,7 @@ O **nível** diz quando o item passa a valer:
 | 11.6 | A saúde tem linha por ligação entre peças, e código de saída por gravidade | Execução | F |
 | 11.7 | O instalador grava com dono e permissão explícitos o que outro serviço lê | Leitura | F |
 | 11.8 | Backup conferido por restauração; restauração conferida por contagem | Execução | F |
-| 11.9 | Atualização com backup, saúde e volta automática, exercitada entre duas versões | Execução: uma atualização que quebra de propósito | C: depois da primeira versão publicada |
+| 11.9 | Atualização com backup, saúde e volta automática, exercitada entre duas versões | Execução: uma atualização que quebra de propósito | L |
 | 11.10 | Diagnóstico com segredos mascarados | Execução | F |
 | 11.11 | Proxy já existente é detectado | Execução | F |
 | 11.12 | A versão em execução se vê de fora | Execução | F |
@@ -239,9 +245,13 @@ O **nível** diz quando o item passa a valer:
 | 12.6 | Etiqueta só nasce no CI, do ramo principal | Leitura do workflow | F |
 | 12.7 | Notas por fragmento, com o efeito no operador; número calculado | Arquivo: a cerca | F |
 | 12.8 | "Exige ação" é um bloco do fragmento, com o passo exato | Leitura | F |
-| 12.9 | Versão cortada inteira pelo CI, com o ramo principal verde | Execução | C: depois da publicação |
+| 12.9 | Versão cortada inteira pelo CI, com o ramo principal verde | Execução | L |
 | 12.10 | Documentação e tela nos idiomas declarados | Leitura | F |
 | 12.11 | O "como fazer" mora no repositório, e o roteiro de corte de versão inclui conferi-lo | Leitura | F |
+| 12.12 | Quem administra atualiza pela tela: versão em execução, versão nova, o que mudou, um botão, e o resultado | Teste de tela, ou execução | L |
+| 12.13 | O aplicativo só registra o pedido; quem atualiza é um agente do kit no servidor, que lê um sim ou não | Leitura | L |
+| 12.14 | Um pedido de atualização por vez, com prazo: pedido aceito e não concluído vira falha visível | Leitura; teste | L |
+| 12.15 | Falha de comunicação do agente fica num registro que persiste, e a tela diz que o agente não está respondendo | Leitura; execução | L |
 
 ## 13. Método — capítulo 00
 
@@ -252,29 +262,29 @@ O **nível** diz quando o item passa a valer:
 | 13.3 | Houve revisão fria, e o parecer está guardado | Arquivo | F |
 | 13.4 | Cada bloqueador da revisão fria foi fechado, com a mudança que o fechou | Leitura | F |
 | 13.5 | Houve instalação real antes da publicação. Se a ordem foi invertida, o registro diz, e a instalação foi feita em seguida | Registro com evidência | F |
-| 13.6 | As lições novas foram devolvidas à Fábrica | Contribuição aberta no repositório dela | C: depois da publicação |
+| 13.6 | As lições novas foram devolvidas à Fábrica | Contribuição aberta no repositório dela | L |
 | 13.7 | Um caminho de ponta a ponta foi executado pelas entradas reais, antes e depois da revisão fria | Registro | F |
 | 13.8 | O dono usou o produto, e o que ele não conseguiu fazer está escrito | Arquivo | F |
 | 13.9 | Existe a lista do que está configurado e ainda não foi exercitado | Arquivo | F |
 
 ## 14. Site — capítulo 13
 
-Todos de nível C: valem quando o produto tem site. Antes disso, a seção inteira é "não se
-aplica", e o desenho da fundação diz quando o site entra.
+Todo produto tem site. Ele é de nível L: entra depois da primeira versão publicada, porque a
+página de instalar e as notas de versão dependem dela, e antes da divulgação.
 
 | Nº | Exigência | Como conferir | Nível |
 |---|---|---|---|
-| 14.1 | O site mora em repositório separado do produto | Comando | C |
-| 14.2 | As notas de versão são lidas do produto, e a página falha alto se a leitura falhar | Leitura | C |
-| 14.3 | O corte de versão do produto reprova se a versão não aparecer no site | Leitura do workflow | C |
-| 14.4 | Os comandos e requisitos da página de instalar são os do kit, por leitura, geração ou teste de paridade | Arquivo: o teste, ou o gerador | C |
-| 14.5 | Toda skill do produto tem entrada na página de guias, por geração ou teste de paridade | Arquivo: o teste, ou o gerador | C |
-| 14.6 | Todo conteúdo copiado do produto tem teste de paridade rodando no CI do site | Leitura do CI | C |
-| 14.7 | Números sociais são lidos da fonte | Leitura | C |
-| 14.8 | A data de atualização vem de uma constante só | Comando: busca | C |
-| 14.9 | O conteúdo está no texto servido, sem depender de script | Execução: a página com scripts desligados | C |
-| 14.10 | Existe o arquivo de resumo para assistentes, com o passo zero | Arquivo | C |
-| 14.11 | O parceiro aparece declarado, com marcação de link patrocinado e o mesmo endereço do repositório | Leitura | C |
-| 14.12 | Os idiomas têm a mesma estrutura, obrigada por tipo e por teste | Arquivo: o teste | C |
-| 14.13 | Existe o contrato de marca do site | Arquivo | C |
-| 14.14 | O curso é capturado do aplicativo real, com dados fictícios, procedência por foto e recibo de publicação | Leitura do roteiro e do recibo | C: quando houver curso |
+| 14.1 | O site mora em repositório separado do produto | Comando | L |
+| 14.2 | As notas de versão são lidas do produto, e a página falha alto se a leitura falhar | Leitura | L |
+| 14.3 | O corte de versão do produto reprova se a versão não aparecer no site | Leitura do workflow | L |
+| 14.4 | Os comandos e requisitos da página de instalar são os do kit, por leitura, geração ou teste de paridade | Arquivo: o teste, ou o gerador | L |
+| 14.5 | Toda skill do produto tem entrada na página de guias, por geração ou teste de paridade | Arquivo: o teste, ou o gerador | L |
+| 14.6 | Todo conteúdo copiado do produto tem teste de paridade rodando no CI do site | Leitura do CI | L |
+| 14.7 | Números sociais são lidos da fonte | Leitura | L |
+| 14.8 | A data de atualização vem de uma constante só | Comando: busca | L |
+| 14.9 | O conteúdo está no texto servido, sem depender de script | Execução: a página com scripts desligados | L |
+| 14.10 | Existe o arquivo de resumo para assistentes, com o passo zero | Arquivo | L |
+| 14.11 | O parceiro aparece declarado, com marcação de link patrocinado e o mesmo endereço do repositório | Leitura | L |
+| 14.12 | Os idiomas têm a mesma estrutura, obrigada por tipo e por teste | Arquivo: o teste | L |
+| 14.13 | Existe o contrato de marca do site | Arquivo | L |
+| 14.14 | O curso é capturado do aplicativo real, com dados fictícios, procedência por foto e recibo de publicação | Leitura do roteiro e do recibo | L. Pode ficar para depois da divulgação se o desenho disser quando |

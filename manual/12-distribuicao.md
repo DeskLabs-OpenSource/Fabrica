@@ -134,6 +134,51 @@ Regras:
 - **A nota é gerada do que está na etiqueta,** e não do que se lembrava.
 - **O canal estável só é promovido depois de todas as imagens publicadas.**
 
+## Atualizar pela tela
+
+Todo produto deixa quem opera atualizar pela própria interface: ver a versão que está rodando,
+a versão nova, o que mudou entre as duas, e um botão. Quem instala não é de infraestrutura, e
+uma atualização que pede terminal é uma atualização que não acontece.
+
+### O desenho
+
+O aplicativo roda em contêiner e **nunca toca no orquestrador da máquina**. Quem atualiza é um
+agente pequeno do kit de instalação, que roda no servidor de tempos em tempos:
+
+1. O agente anuncia ao aplicativo a versão instalada.
+2. A tela mostra a versão em execução, a mais recente publicada e as notas das versões entre
+   as duas, com os avisos de "exige ação" em destaque. A versão mais recente é lida do registro
+   público; a instalação não avisa ninguém.
+3. Quem administra a instalação clica em atualizar. O aplicativo só registra o pedido.
+4. Na próxima passada, o agente lê **um sim ou não**, e não um comando. Se sim, roda o
+   atualizador da versão publicada: backup, troca, migrations, saúde, volta se quebrar
+   (capítulo 11).
+5. O agente devolve o resultado, e a tela mostra: funcionou, ou voltou e por quê.
+
+### As regras
+
+- **O aplicativo pede; não executa.** Entre os dois passa um booleano. Um aplicativo capaz de
+  mandar comandos ao servidor seria uma porta de administração remota.
+- **Só quem administra a instalação pede,** e com a identidade confirmada de novo.
+- **Um pedido por vez, e todo pedido termina.** Um pedido que o agente aceitou e não concluiu
+  tem prazo: vencido, vira falha visível, e outro pode ser feito.
+- **Falha de comunicação do agente fica num registro que persiste.** Senão o sintoma vira "o
+  botão não aparece" e ninguém sabe por quê.
+- **O agente confere que a pasta de onde roda é a dona da instalação,** antes até de anunciar a
+  versão.
+- **O agente não morre calado.** Nenhum passo dele pode derrubar o script depois de ter dito ao
+  aplicativo que ia executar.
+- **A tela de versão lê o que está em execução.** Nunca afirma "é a mais recente" com dado
+  guardado.
+- **O agente que roda é o da versão antiga.** O que ele precisa fazer de novo numa atualização
+  tem de estar no atualizador da versão de destino, e é testado a partir da versão anterior.
+
+*Os erros,* todos do primeiro produto: uma atualização pela tela deixou a instalação fora do ar
+sem recuperação; um pedido aceito e nunca concluído travou todos os seguintes; a tela anunciou
+por dias uma versão que não estava no ar; o agente falhava em silêncio e o botão sumia.
+
+O segundo produto ainda não tem a atualização pela tela. É item de fundação.
+
 ## Depois de publicar
 
 - **A versão aparece onde o público lê.** No primeiro produto, o corte confere que a página

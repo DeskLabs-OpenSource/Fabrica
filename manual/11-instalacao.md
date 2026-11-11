@@ -19,7 +19,7 @@ público do primeiro produto, à frente de qualquer recurso.
 | Que arquiteturas de processador são suportadas | As duas comuns em VPS, desde a primeira versão |
 | O que acontece se a VPS já tem um proxy | O instalador detecta e se adapta |
 | A atualização volta sozinha se quebrar? | Sim |
-| Atualizar pela tela ou pelo terminal | Terminal na fundação; tela depois |
+| Atualizar pela tela ou pelo terminal | Os dois. A tela é obrigatória (capítulo 12); o terminal é o caminho de reserva |
 | Onde fica o backup | Na máquina, com aviso de que copiar para fora é de quem opera |
 
 ## O kit

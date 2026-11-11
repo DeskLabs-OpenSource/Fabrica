@@ -91,6 +91,33 @@ documento ou vem de um comando, ou não se escreve.
 
 Tamanho, espaçamento e contraste se medem no navegador, e não a olho.
 
+## A identidade, antes do lançamento
+
+Todo produto chega à divulgação com a identidade pronta, porque ela aparece em três lugares que
+quem chega vê antes de qualquer tela: o repositório, o site e o próprio painel.
+
+| Peça | Onde aparece |
+|---|---|
+| Marca completa (símbolo e nome), em horizontal | Topo do README, cabeçalho do site |
+| Símbolo sozinho | Ícone do painel, ícone do navegador, avatar da organização |
+| Imagem de capa | A prévia do repositório e do site quando o endereço é compartilhado |
+| Versões para fundo claro e para fundo escuro | Todos os anteriores |
+
+As regras:
+
+- **Vetorial, e no repositório.** Uma pasta de marca, com os arquivos de origem e os
+  exportados. Quem contribui com o site ou com um guia não precisa pedir o logo a ninguém.
+- **Deriva da direção.** As cores são os tokens; a tipografia é a do produto. Uma marca
+  desenhada fora do design system envelhece separada dele.
+- **Da família, com uma coisa só dela.** Produtos irmãos se reconhecem pela mesma construção,
+  e se distinguem por um elemento: uma cor de acento, um símbolo.
+- **Uma fonte só.** O site e o painel leem os arquivos da pasta de marca. Cópia redesenhada à
+  mão diverge.
+- **O nome se escreve de um jeito,** e o README diz qual.
+
+**Não provado:** o primeiro produto tem marca e a guarda em mais de um lugar; o segundo ainda
+não tem nenhuma dessas peças. A lista acima é o mínimo proposto.
+
 ## Se houver marca própria
 
 Estas regras só valem para produto que deixa o revendedor trocar a marca. Todas vêm de erro do

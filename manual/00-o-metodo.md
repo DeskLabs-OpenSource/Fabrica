@@ -242,6 +242,23 @@ maiores. Tenha a regra pronta: o piso declarado de cada dependência vale.
 o construtor escreve as lições novas em [`licoes.md`](../licoes.md): o que aconteceu, a regra,
 como se cobra. Sem isso, o terceiro produto paga de novo o que o segundo já pagou.
 
+## O que todo produto tem na divulgação
+
+Publicar o código não é lançar. Entre uma coisa e outra o produto ganha o que só existe em
+público. Nenhuma destas é opcional:
+
+| O quê | Capítulo |
+|---|---|
+| Versões por etiqueta, com notas de versão montadas dos fragmentos, publicadas no repositório | 12 |
+| A primeira versão cortada, e a atualização entre duas versões exercitada | 11, 12 |
+| Atualização pela tela | 12 |
+| O site: instalar, guias, curso, notas de versão, o parceiro | 13 |
+| A identidade: marca, símbolo e imagem de capa, no repositório e no site | 04 |
+| Os guias: contribuição, e como implementar e cobrar por isso | 10, 02 |
+| A equipe de agentes que mantém o projeto | 14 |
+
+É o nível **L** de [`conformidade.md`](../conformidade.md): vale antes de divulgar.
+
 ## Configurado não é exercitado
 
 Uma fundação termina com muita coisa escrita que nunca rodou: uma fila de merge que nenhuma
