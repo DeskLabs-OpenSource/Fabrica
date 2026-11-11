@@ -105,7 +105,9 @@ se mede pelo lado do parceiro, e não pelo produto.
 ### 8. O custo de terceiros é medido e tem teto
 
 Tudo o que o produto gasta com provedor aparece na tela, por unidade de trabalho, e respeita um
-limite que o operador define.
+limite que o operador define. São dois limites: um por unidade (uma chamada, uma conversa) e um
+somado (por organização e período, ou de unidades simultâneas). Só o primeiro deixa um usuário
+logado multiplicar o gasto abrindo várias unidades de uma vez.
 
 *O porquê:* custo imprevisível de IA foi uma das reclamações mais repetidas no primeiro produto,
 e a capacidade que virou o segundo produto não entrava no limite de gasto.

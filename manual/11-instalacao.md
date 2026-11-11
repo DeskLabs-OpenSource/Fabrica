@@ -135,6 +135,12 @@ Muitas VPS já têm um proxy reverso. O instalador detecta e usa um arquivo de c
 adicional. Todo comando posterior carrega os dois arquivos; o kit faz isso por uma função só,
 para ninguém esquecer.
 
+### 17. Toda porta publicada tem uso
+
+Cada porta que o instalador abre para fora serve a algo que funciona naquele modo de
+instalação. Se num modo a capacidade não funciona (sem conexão segura, por exemplo), a porta
+dela fica só local nesse modo.
+
 ### 13. O instalador termina provando que a pessoa entra
 
 A última coisa que o instalador faz é conferir que a tela de entrada abre e aceita o usuário

@@ -152,7 +152,7 @@ referência converge ou quando ela registra uma decisão diferente.
 | 10.5 (regra do ramo) | O script que aplica a regra dá passagem ao administrador da organização. Não o copie como está |
 
 **Ainda não medidos na referência.** Estes itens entraram na lista depois da última conferência
-e ninguém os mediu lá: 2.12 a 2.15, 3.5, 6.12 a 6.14, 7.9 a 7.11, 8.8 a 8.12, 10.12, 11.15 a
-11.19, 12.11 e 13.7 a 13.9. Três foram olhados por amostragem e não são cumpridos: o guia do
+e ninguém os mediu lá: 2.12 a 2.16, 3.5, 6.12 a 6.14, 7.9 a 7.11, 8.8 a 8.12, 10.12, 11.15 a
+11.20, 12.11 e 13.7 a 13.9. Três foram olhados por amostragem e não são cumpridos: o guia do
 implementador não trata de contrato (2.12), o guia de custos traz o método e não um número
 medido (2.15), e o instalador não confere a entrada do usuário criado (11.16).

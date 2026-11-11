@@ -151,6 +151,8 @@ Lições da própria fundação do P2. Nenhuma tem cerca: são cobradas pelo mé
 | K11 | Muita coisa foi escrita e nunca rodou: fila de merge, acolhida, passo de atualização, publicação de imagens | O produto mantém a lista do que está configurado e ainda não foi exercitado | Revisão | [`referencia.md`](referencia.md) |
 | K12 | No primeiro dia de público, o robô de dependências propôs versões maiores que quebravam o piso declarado | A regra para atualização automática de dependência existe antes da publicação | Configuração do robô | — |
 | K13 | As duas primeiras contribuições depois da fundação entraram com passagem de administrador, implementadas, verificadas e mescladas pela mesma sessão | A regra "quem escreve não aprova" vale desde a primeira contribuição, inclusive para o dono e para agentes | Proteção do ramo, sem exceção para administrador | — (a referência permite a passagem de administrador) |
+| K14 | Uma capacidade nova ganhou uma porta publicada. Num dos modos de instalação a capacidade não funcionava, e a porta ficava aberta na internet mesmo assim | Toda porta publicada tem um uso que funciona naquele modo. O que não tem uso fica só local | Conformidade 11.20 | — |
+| K15 | Uma capacidade nova gastava com provedor e só tinha teto por unidade. Um usuário logado podia abrir quantas unidades quisesse em paralelo | Todo gasto com provedor tem teto somado, além do teto por unidade | Conformidade 2.16 | — |
 
 ## L. O que a comunidade ensinou
 

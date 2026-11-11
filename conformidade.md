@@ -51,6 +51,7 @@ O **nível** diz quando o item passa a valer:
 | 2.8 | Existe guia de custos: quais contas, como estimar, como o produto mede e limita | Arquivo | F |
 | 2.9 | Existe guia do implementador | Arquivo | F |
 | 2.10 | Todo custo de provedor aparece na tela e respeita um teto do operador | Execução | F |
+| 2.16 | Todo caminho que gasta com provedor tem teto somado (por organização e período, ou de simultâneos), além do teto por unidade | Leitura; execução | F |
 | 2.11 | Marca própria é configuração em tempo de execução e sobrevive à atualização | Execução | C: quando houver revenda com marca |
 | 2.12 | O guia do implementador responde: quanto cobrar (método), quem paga os provedores, como prever o gasto, contrato, capacidade da máquina, acesso do cliente, a quem recorrer | Leitura | F |
 | 2.13 | O custo mensal do caminho recomendado está estimado, com o método, e diz onde cada limite gratuito acaba | Leitura do guia de custos | F |
@@ -211,6 +212,7 @@ O **nível** diz quando o item passa a valer:
 | 11.17 | O README declara os ambientes em que a instalação é provada, e o que fazer nos outros | Leitura | F |
 | 11.18 | Os segredos são separados por quem usa; a aplicação não recebe a senha de dono do banco | Leitura | F |
 | 11.19 | O kit recusa rodar de uma pasta que não é a da instalação | Execução | F |
+| 11.20 | Toda porta que o instalador publica tem um uso que funciona naquele modo de instalação; o que não tem uso fica só local | Leitura do instalador, modo por modo | F |
 
 ## 12. Distribuição — capítulo 12
 
