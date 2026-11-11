@@ -114,12 +114,15 @@ Pasta `install/`.
 
 ## O que a referência ainda não cumpre, e o que nunca exercitou
 
-Essas duas listas moram no próprio produto, num lugar só, e são atualizadas a cada auditoria:
+Essas duas listas moram no próprio produto, num lugar só, na pasta de fundação dele, e são
+atualizadas a cada auditoria:
 
-| O que | Onde, no repositório de referência |
-|---|---|
-| O que está configurado e nunca rodou de verdade | `docs/fundacao/nao-exercitado.md` |
-| O resultado de cada item de [`conformidade.md`](conformidade.md) | o relatório mais recente em `docs/fundacao/`, com nome `conformidade-<data>.md` |
+- a lista do que está configurado e nunca rodou de verdade (arquivo `nao-exercitado.md`);
+- o resultado de cada item de [`conformidade.md`](conformidade.md), no relatório mais recente
+  (arquivo `conformidade-<data>.md`).
+
+**Estado em 11/11/2026:** a primeira auditoria da referência foi feita e está numa contribuição
+ainda em revisão. Enquanto ela não entrar, a pasta de fundação não aparece no ramo principal.
 
 Antes de trazer uma peça, procure o item dela no relatório. Peça de item não conforme vale
 como aviso do que não fazer.
