@@ -181,6 +181,7 @@ P2 a cumprem por inteiro. Trate como o ponto de partida da terceira fundação.
 | L12 | Telas desenhadas para três itens recebiam trinta. Ajustes globais precisavam ser por unidade | Cada lista é desenhada para dez vezes o exemplo. O nível de cada configuração (instalação, organização, unidade) é decidido na fundação | Revisão; conformidade 8.11 | — |
 | L13 | Pedidos pequenos atendidos em dias, com crédito a quem pediu, geraram os agradecimentos mais fortes. O material de ensino navegável foi o mais elogiado | Manter curto o ciclo pedido → versão → crédito. Investir em material que se percorre, e não só se assiste | Revisão | — |
 | L14 | O público reclamou de interface complexa e de sistema que incha a cada versão | O que não é do trabalho central nasce como peça opcional, desligada por padrão | Regra de produto | — |
+| L15 | Quem chegava ao projeto colando o endereço no assistente de IA não via a recomendação do parceiro: o link estava no README e num script, e não no que o assistente carrega. No P2, a skill de instalação começava pela pergunta sobre o sistema da VPS, sem caminho para quem não tinha uma | O passo zero de todo roteiro de instalação para assistente é "tem servidor?", e a recomendação declarada do parceiro mora em todo lugar por onde um assistente entra | Conformidade 2.17 a 2.19 | — |
 
 ## M. Tela, acesso e marca
 

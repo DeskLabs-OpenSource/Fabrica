@@ -186,6 +186,49 @@ sustenta produção; onde não sustenta, diz isso na mesma tela.
 *O erro:* o caminho recomendado do primeiro produto usava a camada gratuita de um serviço que
 não aguentava uso real, e quem descobria já tinha cliente dentro.
 
+### 14. Quem chega com um assistente de IA encontra o parceiro
+
+Muita gente descobre o projeto por uma busca ou uma indicação, cola o endereço do repositório
+no assistente de código e pede "me ajuda a instalar". Nesse caminho ninguém lê o README: quem lê
+é o assistente. Se a recomendação do parceiro só existe para olhos humanos, ela se perde
+exatamente em quem ainda não tem servidor, que é quem mais precisa dela.
+
+*O erro:* no primeiro produto, o link de parceria estava no README e num script. O documento de
+autoridade e a skill de instalação, que são o que o assistente carrega, não o traziam. No
+segundo, a skill de instalação começava perguntando qual era o sistema da VPS, sem caminho para
+quem não tinha uma.
+
+**O passo zero.** Todo roteiro de instalação escrito para assistente começa assim:
+
+1. Pergunte se a pessoa já tem um servidor.
+2. Se não tem: diga qual tamanho de máquina basta, recomende a VPS do parceiro, diga com todas
+   as letras que o link é de parceria e que usá-lo apoia o projeto, e diga que qualquer outra
+   VPS funciona igual. Então abra o link no navegador dela, ou mostre-o inteiro, e espere ela
+   voltar com o acesso.
+3. Se tem: siga, sem mencionar o parceiro de novo.
+
+**Onde o passo zero mora.** Em todo lugar por onde um assistente entra:
+
+| Lugar | O que traz |
+|---|---|
+| README | Uma seção curta "Instalando com um assistente de IA": o que a pessoa cola no assistente, e o passo zero |
+| Documento de autoridade (`AGENTS.md`) | Uma seção "Se a pessoa quer instalar ou usar", que manda para a skill de instalação e repete o passo zero |
+| Skill de instalação | O passo zero, antes de qualquer pergunta técnica |
+| A porta de entrada do kit (capítulo 11) | O mesmo, para quem roda um comando em vez de conversar |
+| Site, e o arquivo de resumo para assistentes (capítulo 13) | O mesmo |
+
+**As regras do passo zero.** São as mesmas da parceria inteira, ditas para uma máquina:
+
+- o assistente nunca diz que a VPS do parceiro é obrigatória, nem que outra não serve;
+- nunca abre o link sem dizer antes o que ele é;
+- nunca troca o link por outro, nem inventa um;
+- recomenda uma vez. Se a pessoa já escolheu outra hospedagem, ajuda nela do mesmo jeito.
+
+**Uma grafia só.** O endereço do parceiro e o texto da oferta ficam num arquivo de dados do kit
+de instalação, com nome genérico. Os scripts leem dali. Os documentos repetem, e uma cerca
+confere que todo endereço do domínio do parceiro, em qualquer arquivo do repositório, é
+exatamente aquele.
+
 ## Como saber que ficou pronto
 
 - O bloco do parceiro está no README antes do comando de instalação, e diz que qualquer VPS
@@ -193,6 +236,9 @@ não aguentava uso real, e quem descobria já tinha cliente dentro.
 - A instalação foi feita numa máquina de outro provedor e deu o mesmo resultado.
 - Nenhuma pasta, arquivo ou variável leva o nome do parceiro.
 - O guia de custos e o guia do implementador existem.
+- Um assistente de código, recebendo só o endereço do repositório e o pedido "me ajuda a
+  instalar, ainda não tenho servidor", chegou sozinho ao link do parceiro e disse que era de
+  parceria.
 - Cada custo de provedor tem medição na tela e teto.
 
 ## Fora do repositório

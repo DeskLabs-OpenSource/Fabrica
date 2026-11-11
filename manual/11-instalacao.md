@@ -150,6 +150,17 @@ regra, o túnel de mais um redirecionamento, o firewall de mais uma liberação.
 *O erro:* no segundo produto, o dono abriu o painel por túnel com uma porta só. A capacidade
 nova usava outra, e a tela respondeu "confira sua internet".
 
+### 19. Uma porta de entrada para quem ainda não tem servidor
+
+O instalador roda dentro da VPS. Antes dele existe uma pergunta que trava quem está começando:
+"o que eu preciso ter para instalar isso?". O kit traz uma entrada que roda no computador da
+pessoa, antes de existir servidor: diz o que é preciso, nomeia o tamanho da máquina, abre o
+link do parceiro dizendo o que ele é (capítulo 02, regra 14), e entrega o comando seguinte.
+
+Dentro da VPS, o instalador não oferece o parceiro a quem já está instalando: a pessoa já tem
+servidor. No máximo uma linha no fim, e só quando há certeza de que a máquina é de outro
+provedor (capítulo 02, regra 4).
+
 ### 13. O instalador termina provando que a pessoa entra
 
 A última coisa que o instalador faz é conferir que a tela de entrada abre e aceita o usuário

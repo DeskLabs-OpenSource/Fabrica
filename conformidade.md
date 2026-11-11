@@ -54,6 +54,9 @@ O **nível** diz quando o item passa a valer:
 | 2.9 | Existe guia do implementador | Arquivo | F |
 | 2.10 | Todo custo que o produto origina e consegue medir aparece na tela e respeita um teto do operador. O que ele não mede (a VPS, a conta de um fornecedor) está dito no guia de custos | Execução, ou o teste que prova | F |
 | 2.16 | Todo caminho que gasta com provedor tem teto somado (por organização e período, ou de simultâneos), além do teto por unidade | Leitura; execução | F |
+| 2.17 | O roteiro de instalação para assistente começa pelo passo zero (tem servidor? se não, o parceiro, declarado), e ele está no README, no documento de autoridade e na skill de instalação | Leitura dos três | F |
+| 2.18 | O endereço do parceiro tem uma grafia só no repositório, vinda de um arquivo de dados do kit | Arquivo: a cerca | F |
+| 2.19 | Um assistente que recebe só o endereço do repositório e "me ajuda a instalar, não tenho servidor" chega ao link do parceiro e o declara como de parceria | Execução: uma sessão nova de assistente, sem contexto | F |
 | 2.11 | Marca própria é configuração em tempo de execução e sobrevive à atualização | Execução | C: quando houver revenda com marca |
 | 2.12 | O guia do implementador responde: quanto cobrar (método), quem paga os provedores, como prever o gasto, contrato, capacidade da máquina, acesso do cliente, a quem recorrer | Leitura | F |
 | 2.13 | O custo mensal do caminho recomendado está estimado, com o método, e diz onde cada limite gratuito acaba | Leitura do guia de custos | F |
@@ -222,6 +225,7 @@ O **nível** diz quando o item passa a valer:
 | 11.21 | O CI roda o instalador de verdade, com contêineres, num ambiente descartável, até o usuário criado entrar | Leitura do workflow | F |
 | 11.22 | Sem domínio, o padrão do instalador não publica a tela de entrada sem conexão segura | Leitura; teste do kit | F |
 | 11.23 | Tudo o que o navegador usa chega pela mesma origem do painel. Se houver uma segunda porta, a tela testa o alcance dela e nomeia o que falta | Leitura do proxy e do instalador; teste de tela | F |
+| 11.24 | Existe uma entrada que roda no computador da pessoa, antes do servidor: o que é preciso, o tamanho da máquina, o parceiro declarado, o comando seguinte | Arquivo; execução | F |
 
 ## 12. Distribuição — capítulo 12
 
