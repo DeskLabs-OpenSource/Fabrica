@@ -123,6 +123,7 @@ O **nível** diz quando o item passa a valer:
 | 6.12 | A sessão é validada no servidor a cada requisição | Leitura | F |
 | 6.13 | Cada controle de segurança da tela tem um teste que prova que ligar e desligar mudam o comportamento | Arquivo: o teste | F |
 | 6.14 | Configuração de segurança lida do banco mantém o último valor bom quando a leitura falha | Leitura | F |
+| 6.15 | Conta desativada ou removida não entra, não recebe aviso e não decide nada: toda consulta que escolhe pessoas confere o estado | Comando: busca por toda consulta à tabela de pessoas | F |
 
 ## 7. Multiempresa — capítulo 07
 

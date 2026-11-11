@@ -112,6 +112,16 @@ identificador é negação de serviço; combine com o endereço de origem.
 Chave de provedor e senha de serviço externo nunca ficam em texto puro no banco, em registro ou
 em evento.
 
+### 14. Tirar o acesso vale em todo lugar
+
+Quando existe um estado que tira o acesso de alguém (desativada, removida, suspensa), ele é
+conferido em toda consulta que escolhe pessoas: quem entra, quem recebe aviso, quem pode
+decidir. Conferir só na entrada deixa quem saiu recebendo dados.
+
+*O erro:* no segundo produto, a desativação foi respeitada na sessão e no login, e as rotinas
+que escolhiam para quem mandar aviso continuaram olhando a tabela inteira. Uma revisão por quem
+não escreveu o código achou, buscando todas as consultas à tabela de pessoas.
+
 ## Como saber que ficou pronto
 
 - A tabela de decisões está preenchida, incluindo o que não existe.

@@ -153,6 +153,7 @@ Lições da própria fundação do P2. Nenhuma tem cerca: são cobradas pelo mé
 | K13 | As duas primeiras contribuições depois da fundação entraram com passagem de administrador, implementadas, verificadas e mescladas pela mesma sessão | A regra "quem escreve não aprova" vale desde a primeira contribuição, inclusive para o dono e para agentes | Proteção do ramo, sem exceção para administrador | — (a referência permite a passagem de administrador) |
 | K14 | Uma capacidade nova ganhou uma porta publicada. Num dos modos de instalação a capacidade não funcionava, e a porta ficava aberta na internet mesmo assim | Toda porta publicada tem um uso que funciona naquele modo. O que não tem uso fica só local | Conformidade 11.20 | — |
 | K15 | Uma capacidade nova gastava com provedor e só tinha teto por unidade. Um usuário logado podia abrir quantas unidades quisesse em paralelo | Todo gasto com provedor tem teto somado, além do teto por unidade | Conformidade 2.16 | — |
+| K16 | Nasceu o estado "pessoa desativada". A entrada passou a respeitá-lo, e os lugares que escolhiam para quem mandar aviso não: quem saiu continuaria recebendo dados | Um estado que tira o acesso de alguém é conferido em todo lugar que escolhe pessoas, e não só na entrada | Busca por toda consulta à tabela de pessoas; conformidade 6.15 | — |
 
 ## L. O que a comunidade ensinou
 
