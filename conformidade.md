@@ -239,10 +239,10 @@ O **nível** diz quando o item passa a valer:
 |---|---|---|---|
 | 12.1 | Nenhum serviço de produção sem imagem publicada | Arquivo: a cerca | F |
 | 12.2 | O instalador recusa, com erro claro, instalar uma versão publicada que não tem imagem. Construir na VPS só existe antes da primeira versão | Leitura do instalador | F |
-| 12.3 | A instalação grava número de versão, e não canal | Execução | F |
+| 12.3 | A instalação grava número de versão, e não canal, e o código instalado é o da mesma versão das imagens | Execução | F |
 | 12.4 | O nome da imagem e o formato da versão têm uma fonte só | Leitura | F |
 | 12.5 | Imagens para as arquiteturas declaradas | Leitura do workflow | F |
-| 12.6 | Etiqueta só nasce no CI, do ramo principal | Leitura do workflow | F |
+| 12.6 | Etiqueta só nasce no CI, do ramo principal: a publicação de imagens recusa etiqueta cujo commit não está no ramo principal, e o repositório restringe quem cria etiqueta de versão | Leitura do workflow; comando | F |
 | 12.7 | Notas por fragmento, com o efeito no operador; número calculado | Arquivo: a cerca | F |
 | 12.8 | "Exige ação" é um bloco do fragmento, com o passo exato | Leitura | F |
 | 12.9 | Versão cortada inteira pelo CI, com o ramo principal verde | Execução | L |
@@ -253,6 +253,8 @@ O **nível** diz quando o item passa a valer:
 | 12.14 | Um pedido de atualização por vez, com prazo: pedido aceito e não concluído vira falha visível | Leitura; teste | L |
 | 12.15 | Falha de comunicação do agente fica num registro que persiste, e a tela diz que o agente não está respondendo | Leitura; execução | L |
 | 12.16 | As imagens publicadas baixam sem credencial, numa máquina que nunca entrou no registro | Execução | L |
+| 12.17 | O passo que cria a etiqueta decide pelo commit que mudou a versão nas notas, e não depende de ser o último envio ao ramo principal | Leitura do workflow | L |
+| 12.18 | A página da versão só é publicada depois de as imagens baixarem sem credencial | Leitura do workflow | L |
 
 ## 13. Método — capítulo 00
 

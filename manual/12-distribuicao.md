@@ -50,10 +50,20 @@ sabe o que está rodando, e duas instalações "iguais" não são.
 | Etiqueta | Significa | Quem usa |
 |---|---|---|
 | Número da versão | Imutável | Toda instalação de cliente |
-| Canal estável | A última versão publicada | O instalador, para descobrir o número. Ele grava o número, e não o canal |
+| Canal estável | A última versão publicada | Ninguém instala por ele. Se existir, está escrito que não é para instalação |
 | Topo do ramo principal | O que acabou de entrar | Quem desenvolve |
 
 A política de baixar acompanha a etiqueta: imutável, baixa se faltar; móvel, baixa sempre.
+
+**De onde o instalador tira o número.** Das etiquetas de versão do repositório, e não do
+registro de imagens. O registro responde igual, a quem não tem credencial, para imagem que não
+existe e para imagem privada, e por isso não serve para dizer "ainda não há versão". O
+repositório é público e não avisa ninguém.
+
+**O código e as imagens são da mesma versão.** Quem instala fica com o código da etiqueta, e
+não com o topo do ramo principal: o arquivo de composição e o kit de um commit mais novo rodando
+com imagens de uma versão anterior é uma combinação que ninguém testou. Vale para a entrada de
+uma linha e para quem clonou à mão.
 
 **Divergência a resolver no segundo produto.** O instalador grava o canal estável como versão
 da instalação, e só o atualizador fixa um número depois.
@@ -133,6 +143,14 @@ Regras:
   ficaram fora das notas. O congelamento é feito pela máquina.
 - **A nota é gerada do que está na etiqueta,** e não do que se lembrava.
 - **O canal estável só é promovido depois de todas as imagens publicadas.**
+- **"Versão publicada" quer dizer instalável.** A página da versão no repositório só aparece
+  depois de as imagens estarem no registro e baixarem sem credencial. Senão existe uma janela em
+  que a versão está anunciada e ninguém consegue instalá-la.
+- **O corte não depende de ser o último envio.** O passo que cria a etiqueta decide pelo commit
+  que mudou a versão nas notas, e não pelo envio que o disparou. Outro envio ao ramo principal,
+  logo em seguida, não pode fazer o corte se perder.
+- **Uma arquitetura lenta não segura a outra.** Cada arquitetura constrói no seu job; a falha ou
+  a demora de uma não impede a publicação da outra antes de se saber o motivo.
 
 ## Atualizar pela tela
 

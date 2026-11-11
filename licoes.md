@@ -80,6 +80,9 @@ também entra na lista "o que o CI não vê" do produto.
 | E13 | O agente de atualização falhava ao falar com o aplicativo sem deixar rastro. O sintoma era "o botão de atualizar não aparece" | Falha de comunicação do agente fica num registro que persiste | Conformidade 12.15 | — |
 | E14 | Quem instala não atualizava, porque atualizar pedia terminal | Atualização pela tela, com o aplicativo só registrando o pedido e um agente do kit executando | Conformidade 12.12, 12.13 | — |
 | E15 | P2: as imagens publicadas pelo CI nascem privadas no registro. Sem alguém torná-las públicas, quem instala não baixa, e o instalador cai na construção local sem ninguém perceber | Depois da primeira publicação, confere-se que a imagem baixa sem credencial | Conformidade 12.16 | — |
+| E16 | P2: o instalador escolhia a última versão publicada e baixava as imagens dela, mas quem tinha clonado à mão ficava com o código do topo do ramo principal | O código instalado é o da etiqueta da versão, em todo caminho de instalação | Conformidade 12.3 | — |
+| E17 | P2: o passo que cria a etiqueta olhava só o último envio, e a fila de execuções guardava uma pendente por vez. Um envio logo depois do corte faria a versão nunca virar etiqueta, sem aviso | O corte decide pelo commit que mudou a versão nas notas | Conformidade 12.17 | — |
+| E18 | P2: as duas arquiteturas construíam no mesmo passo, uma delas por emulação e com tempo máximo. Se ela estourasse, nenhuma seria publicada, com a etiqueta já criada | Uma arquitetura por job | Revisão | — |
 
 ## F. Sistema vivo
 
