@@ -79,6 +79,7 @@ também entra na lista "o que o CI não vê" do produto.
 | E12 | Um pedido de atualização pela tela foi aceito pelo agente do servidor e nunca concluído. Ficou preso para sempre, e nenhum pedido novo podia ser feito | Um pedido por vez, com prazo. Pedido aceito e não concluído vira falha visível | Conformidade 12.14 | — |
 | E13 | O agente de atualização falhava ao falar com o aplicativo sem deixar rastro. O sintoma era "o botão de atualizar não aparece" | Falha de comunicação do agente fica num registro que persiste | Conformidade 12.15 | — |
 | E14 | Quem instala não atualizava, porque atualizar pedia terminal | Atualização pela tela, com o aplicativo só registrando o pedido e um agente do kit executando | Conformidade 12.12, 12.13 | — |
+| E15 | P2: as imagens publicadas pelo CI nascem privadas no registro. Sem alguém torná-las públicas, quem instala não baixa, e o instalador cai na construção local sem ninguém perceber | Depois da primeira publicação, confere-se que a imagem baixa sem credencial | Conformidade 12.16 | — |
 
 ## F. Sistema vivo
 

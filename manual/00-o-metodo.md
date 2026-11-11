@@ -228,8 +228,10 @@ dono aceite, por escrito, publicar com ele aberto.
 
 - regra do ramo principal, time de mantenedores, discussões e canal de relato privado de
   vulnerabilidade;
-- o que o agente não consegue fazer fica numa lista para o dono. No segundo produto, uma
-  permissão da organização exigia um nível de acesso que o agente não tinha.
+- o que o agente não consegue fazer fica numa lista para o dono, com o caminho exato na tela.
+  No segundo produto foram duas coisas, as duas da organização: permitir que os workflows abram
+  contribuições (sem isso o corte de versão não começa), e tornar públicas as imagens depois da
+  primeira publicação (elas nascem privadas, e quem instala não consegue baixá-las).
 
 **Logo depois de publicar,** exercita-se o que só funciona em público: a linha única de
 instalação, a publicação das imagens, o corte da primeira versão e uma instalação a partir da

@@ -252,6 +252,7 @@ O **nível** diz quando o item passa a valer:
 | 12.13 | O aplicativo só registra o pedido; quem atualiza é um agente do kit no servidor, que lê um sim ou não | Leitura | L |
 | 12.14 | Um pedido de atualização por vez, com prazo: pedido aceito e não concluído vira falha visível | Leitura; teste | L |
 | 12.15 | Falha de comunicação do agente fica num registro que persiste, e a tela diz que o agente não está respondendo | Leitura; execução | L |
+| 12.16 | As imagens publicadas baixam sem credencial, numa máquina que nunca entrou no registro | Execução | L |
 
 ## 13. Método — capítulo 00
 
