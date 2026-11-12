@@ -231,7 +231,7 @@ Scripts pequenos, fora da ferramenta, sem modelo nenhum.
 
 | Vigia | Faz |
 |---|---|
-| Sentinela | Lê o repositório de tempos em tempos, sem gastar nada, e só acorda o suporte se alguém de fora escreveu |
+| Sentinela | Lê o repositório de tempos em tempos, sem gastar nada, e só acorda o suporte se alguém de fora escreveu. A trava nativa da ferramenta para "só rodar se houver o que fazer" olha a atividade de dentro dela, e não o repositório: a sentinela é o que acorda por evento de fora, uma por empresa |
 | Disjuntor | Pausa agente por falha repetida, por taxa de falha ou por teto; pausa os pesados quando a memória da máquina acaba |
 | Cópia de segurança | Copia o estado da ferramenta para outra máquina |
 
@@ -313,13 +313,20 @@ decisões, e não a implementação. Por isso o roteiro aprovado em lote vem ant
 
 1. A conta de robô do produto, com o menor escopo, e a regra do ramo sem passagem de
    administrador.
-2. A empresa, importada do repositório de definição, com os agentes pausados.
-3. Os vigias sem IA, com o modo de ensaio rodado.
-4. O canal de decisão do dono, com a checagem e a rota de reserva.
-5. Líder, maestro, revisor, integrador, suporte e guardião, com tudo em rascunho.
-6. Uma semana medida: execuções por dia, falhas, custo equivalente, rascunhos corrigidos.
-7. Liberar canal por canal; acrescentar papéis quando a fila pedir.
-8. O desenvolvimento autônomo por último, com o roteiro aprovado.
+2. A empresa, importada do repositório de definição, com os agentes pausados. Na empresa nova,
+   confira e ligue à mão a aprovação para contratar agente: ela nasce desligada. O ambiente de
+   cada agente é montado do zero, nunca copiado de outro agente, porque a cópia herda credencial
+   pessoal do dono.
+3. O dono entra com a conta de assinatura na empresa nova, pelo navegador. Conta e segredos não
+   atravessam empresas, nem na mesma instalação. Sem conta, o agente contratado fica parado em
+   verificação, e a tela não diz por quê: a causa só aparece no registro do processo da ferramenta.
+4. Os vigias sem IA, por empresa, com o modo de ensaio rodado. Vigia escrito para uma empresa só
+   precisa receber a empresa como parâmetro antes de servir à segunda.
+5. O canal de decisão do dono, com a checagem e a rota de reserva.
+6. Líder, maestro, revisor, integrador, suporte e guardião, com tudo em rascunho.
+7. Uma semana medida: execuções por dia, falhas, custo equivalente, rascunhos corrigidos.
+8. Liberar canal por canal; acrescentar papéis quando a fila pedir.
+9. O desenvolvimento autônomo por último, com o roteiro aprovado.
 
 ## Como saber que ficou pronto
 
