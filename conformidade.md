@@ -154,7 +154,7 @@ O **nível** diz quando o item passa a valer:
 | 7.8 | Nenhuma rota assume "só existe uma organização", e rota pública não mostra dado de organização | Leitura das rotas | F |
 | 7.9 | A organização vem da sessão, da chave ou do segredo de quem chama, e nunca do corpo de uma requisição de fora. Chamada entre processos do próprio produto, autenticada por segredo interno, pode levá-la no corpo | Leitura das rotas | F |
 | 7.10 | O papel da aplicação não contorna o isolamento | Leitura | F, se o banco tem papéis |
-| 7.11 | Registro de auditoria é só de acréscimo, por permissão do banco | Comando: as permissões da tabela | C: quando houver auditoria |
+| 7.11 | Registro de auditoria é só de acréscimo, por permissão do banco, inclusive para o papel de sistema | Teste de schema que confronta a lista de tabelas só de acréscimo (cada uma com motivo) com as permissões reais | C: quando houver auditoria |
 
 ## 8. Administração — capítulo 08
 
