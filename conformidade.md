@@ -130,7 +130,7 @@ O **nível** diz quando o item passa a valer:
 | 6.4 | Primeiro usuário nasce pelo instalador; senha nunca como argumento | Leitura | F |
 | 6.5 | Recuperação de emergência de dentro do servidor encerra as sessões | Execução | F |
 | 6.6 | Login não revela quem tem conta | Execução | F |
-| 6.7 | Bloqueio por tentativas não permite trancar outra pessoa só sabendo o e-mail | Leitura | F |
+| 6.7 | Bloqueio por tentativas não permite trancar outra pessoa só sabendo o e-mail. O endereço conta IPv6 pelo prefixo /64, e a contagem em memória tem faxina | Leitura; teste com vários endereços do mesmo /64 | F |
 | 6.8 | Segredo de operador cifrado em repouso | Leitura | F |
 | 6.9 | O que o produto não tem está em "limites conhecidos" | Leitura do documento de segurança | F |
 | 6.10 | Segundo fator opcional, ligado pela tela, com cadastro e prova separados | Execução | C: quando houver segundo fator |
