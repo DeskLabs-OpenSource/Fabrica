@@ -146,7 +146,7 @@ O **nível** diz quando o item passa a valer:
 |---|---|---|---|
 | 7.1 | Toda tabela tem organização | Arquivo: a cerca | F |
 | 7.2 | Uma porta única; acesso direto ao banco fora do núcleo é reprovado | Arquivo: a cerca | F |
-| 7.3 | A porta de sistema só em arquivo listado com motivo | Arquivo: a cerca e a lista | F |
+| 7.3 | A porta de sistema só em arquivo listado com motivo. Numa rota que também atende sessão, ela só serve ao agregado de quem não tem sessão; o que vai à tela de uma sessão é lido pela porta da organização dela | Arquivo: a cerca e a lista; teste com duas organizações em cada rota assim | F |
 | 7.4 | O teste de isolamento tenta atravessar, e descobre as tabelas pelo catálogo | Leitura do teste | F |
 | 7.5 | O teste roda com o papel da aplicação, em banco criado pelo caminho do instalador | Leitura | F, se o banco tem papéis |
 | 7.6 | Chaves entre tabelas levam a organização | Leitura do schema | F, se o banco tem chaves estrangeiras |
