@@ -119,6 +119,7 @@ O **nível** diz quando o item passa a valer:
 | 5.17 | Varredura de segredo no CI e antes do commit | Leitura | F |
 | 5.18 | Toda afirmação "o CI prova X", em documento, aponta para um job que existe e faz isso (as cercas são do item 5.10) | Leitura, afirmação por afirmação | F |
 | 5.19 | Testes sem relógio real, porta fixa ou fuso | Comando: busca por data e porta literais em teste | F |
+| 5.22 | O modo simulado e os substitutos de teste cumprem o contrato da peça real também no comportamento: ordem, espera, o que acontece no fim. Desvio que ainda existe está escrito junto do substituto | Leitura: o contrato contra cada substituto | L |
 
 ## 6. Autenticação — capítulo 06
 

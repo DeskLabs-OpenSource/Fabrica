@@ -146,7 +146,10 @@ Regras que saíram daqui:
 
 - **Um caminho de ponta a ponta roda sem credencial nem serviço externo.** O produto tem um modo
   simulado da sua dependência mais cara.
-- **A resposta simulada tem o formato do contrato real.** Formato inventado esconde o defeito.
+- **A resposta simulada tem o formato do contrato real, e o comportamento também.** Formato inventado esconde o
+  defeito. Comportamento inventado mostra defeito onde o produto está certo: no segundo produto, o transporte simulado
+  não esperava a fala tocar quando o agente encerrava, a medida feita por ele foi lida como defeito desse caso também, e o
+  primeiro conserto teria cortado a despedida do agente nas ligações reais.
 - **O teste imita o uso real, inclusive a forma de entrega.** Um teste do script de entrada
   passava com e sem a proteção que devia provar, porque entregava o script por arquivo, e o uso
   real é por cano. Sabotagem que não derruba o teste revela um teste fraco.
