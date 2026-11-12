@@ -261,6 +261,7 @@ O **nível** diz quando o item passa a valer:
 | 12.18 | A página da versão só é publicada depois de as imagens baixarem sem credencial | Leitura do workflow | L |
 | 12.19 | Quando a atualização troca um arquivo de configuração montado num contêiner, ela faz o contêiner ler o novo (reinício ou recarga), na ida e na volta | Teste do kit contando os dois caminhos; numa instalação real, a configuração em uso é a nova | F |
 | 12.20 | O corte de versão confere os documentos de entrada (README, documento de autoridade, skill de instalar, roteiro de quem chega): nenhuma frase de estado contradiz o que a versão entrega | Leitura do PR de versão: a conferência está registrada nele | L |
+| 12.21 | A saída inteira de cada atualização, pela tela ou pelo terminal, fica num arquivo no servidor, com a mesma máscara de segredos, permissão só do dono e rotação; a tela diz onde ele está | Leitura do agente e do atualizador; o arquivo numa instalação real depois de uma atualização | L |
 
 ## 13. Método — capítulo 00
 
