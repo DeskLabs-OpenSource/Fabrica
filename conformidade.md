@@ -242,7 +242,7 @@ O **nível** diz quando o item passa a valer:
 | Nº | Exigência | Como conferir | Nível |
 |---|---|---|---|
 | 12.1 | Nenhum serviço de produção sem imagem publicada | Arquivo: a cerca | F |
-| 12.2 | O instalador recusa, com erro claro, instalar uma versão publicada que não tem imagem. Depois da primeira versão, construir na VPS só acontece pedido de propósito (uma opção com nome), e o instalador diz que é saída de emergência | Leitura do instalador | F |
+| 12.2 | O instalador recusa, com erro claro, instalar uma versão publicada que não tem imagem. Depois da primeira versão, construir na VPS só acontece pedido de propósito (uma opção com nome), e o instalador diz o que custa e por que não há imagem (arquitetura sem imagem publicada, versão de desenvolvimento, emergência) | Leitura do instalador | F |
 | 12.3 | A instalação grava número de versão, e não canal, e o código instalado é o da mesma versão das imagens | Execução | F |
 | 12.4 | O nome da imagem e o formato da versão têm uma fonte só | Leitura | F |
 | 12.5 | Imagens para as arquiteturas declaradas. Declarar menos arquiteturas do que o produto já suportou pede registro de decisão | Leitura do workflow e do README | F |
@@ -260,7 +260,7 @@ O **nível** diz quando o item passa a valer:
 | 12.17 | O passo que cria a etiqueta decide pelo commit que mudou a versão nas notas, e não depende de ser o último envio ao ramo principal, nem de o PR de versão entrar como um commit só (ou o repositório só aceita squash) | Leitura do workflow e da configuração de merge | L |
 | 12.18 | A página da versão só é publicada depois de as imagens baixarem sem credencial | Leitura do workflow | L |
 | 12.19 | Quando a atualização troca um arquivo de configuração montado num contêiner, ela faz o contêiner ler o novo (reinício ou recarga), na ida e na volta | Teste do kit contando os dois caminhos; numa instalação real, a configuração em uso é a nova | F |
-| 12.20 | O corte de versão confere os documentos de entrada (README, documento de autoridade, skill de instalar, roteiro de quem chega): nenhuma frase de estado contradiz o que a versão entrega | Leitura no PR de versão | L |
+| 12.20 | O corte de versão confere os documentos de entrada (README, documento de autoridade, skill de instalar, roteiro de quem chega): nenhuma frase de estado contradiz o que a versão entrega | Leitura do PR de versão: a conferência está registrada nele | L |
 
 ## 13. Método — capítulo 00
 
