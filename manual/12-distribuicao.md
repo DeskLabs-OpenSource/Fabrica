@@ -18,7 +18,9 @@
 ### 1. Nenhum serviço é construído na máquina do cliente
 
 Todo serviço do arquivo de composição de produção aponta para uma imagem publicada. A instrução
-de construir pode existir ao lado, como saída de emergência, e nunca sozinha.
+de construir pode existir ao lado, e nunca sozinha. Ela serve a quem a pede de propósito: numa
+arquitetura sem imagem publicada, numa versão de desenvolvimento ou numa emergência. O instalador
+diz o que custa e por que não há imagem.
 
 *O erro:* no primeiro produto, um dos serviços não tinha imagem publicada. Era construído na
 VPS de cada cliente na instalação, e depois disso nenhuma atualização o reconstruía. Ele nunca
