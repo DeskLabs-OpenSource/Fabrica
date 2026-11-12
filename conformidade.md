@@ -15,7 +15,10 @@
   As saídas são corrigir, registrar a decisão, ou o dono aceitar por escrito seguir com ele
   aberto.
 - "Decidido diferente" é resposta legítima. A Fábrica exige a decisão escrita, e não a
-  obediência. O que ela não aceita é a divergência sem motivo.
+  obediência. O que ela não aceita é a divergência sem motivo. Conta como decisão o registro que
+  diz a alternativa da Fábrica, por que não foi seguida e o que custa divergir. Um registro que só
+  descreve a consequência ("quem sabe o e-mail consegue bloquear") não é decisão: o item fica não
+  conforme.
 - Onde o jeito de conferir é "teste de tela, ou execução", o teste vale mais: ele prova a
   presença. Só com leitura se prova a ausência, e nunca a presença.
 - Quando um item "decidido diferente" tiver uma razão melhor que a do manual, a lição volta para
@@ -53,7 +56,7 @@ O **nível** diz quando o item passa a valer:
 | 2.4 | Toda ocorrência do link do parceiro o identifica como de parceria, e nenhuma promete algo que as outras não prometem | Comando: busca pelo link; leitura das ocorrências | F |
 | 2.5 | O instalador só menciona o parceiro sob condição testada | Arquivo: o teste | F |
 | 2.6 | "Caminho genérico nunca sabotado" e "sem recurso pago" são regras de produto escritas | Leitura do documento de governança | F |
-| 2.7 | Telemetria: nenhuma, ou só com consentimento declarado no README | Leitura | F |
+| 2.7 | Telemetria: nenhuma, ou só com consentimento declarado no README. Todo contato que o produto faz sozinho com fora (consulta de versões, busca de atualização) está listado no README, com o que envia | Leitura | F |
 | 2.8 | Existe guia de custos: quais contas, como estimar, como o produto mede e limita | Arquivo | F |
 | 2.9 | Existe guia do implementador | Arquivo | F |
 | 2.10 | Todo custo que o produto origina e consegue medir aparece na tela e respeita um teto do operador. O que ele não mede (a VPS, a conta de um fornecedor) está dito no guia de custos | Execução, ou o teste que prova | F |
@@ -73,7 +76,7 @@ O **nível** diz quando o item passa a valer:
 |---|---|---|---|
 | 3.1 | Cada escolha estrutural tem registro de decisão com alternativas descartadas e custos | Arquivo | F |
 | 3.2 | O sistema sobe sem conta em serviço de terceiros | Execução: instalação limpa | F |
-| 3.3 | Dependências de terceiros com versão fixa | Leitura do arquivo de composição | F |
+| 3.3 | Dependências de terceiros com versão fixa, inclusive a base de cada imagem que o projeto constrói | Leitura do arquivo de composição e da primeira linha de cada `Dockerfile` | F |
 | 3.4 | Memória e disco do sistema parado, medidos na VPS da instalação real, estão registrados com o tamanho da máquina | Leitura do registro da instalação real | F |
 | 3.5 | A peça de maior risco técnico rodou antes de o desenho ser fechado: num produto irmão, ou sozinha numa VPS | Registro de decisão | F |
 
@@ -109,7 +112,7 @@ O **nível** diz quando o item passa a valer:
 | 5.12 | Check de contribuição só mede o que ela mudou; estado acumulado é do ramo principal | Leitura dos workflows | F |
 | 5.13 | Cada job do CI que pode reprovar uma contribuição tem o passo que diz se a causa está nela ou fora | Leitura dos workflows | F |
 | 5.14 | O CI cria o banco do zero, só pelas migrations | Leitura do workflow | F |
-| 5.20 | O CI atualiza a partir da última versão publicada, com dados, e esse passo já rodou | Execução | L |
+| 5.20 | O CI atualiza a partir da última versão publicada, com dados nas tabelas que guardam o trabalho de quem usa, e esse passo já rodou | Execução | L |
 | 5.21 | O painel tem testes que dirigem o navegador nos caminhos de primeira impressão: entrar, configurar, a primeira ação útil | Arquivo: os testes | F |
 | 5.15 | O caminho central roda de ponta a ponta sem credencial, num job do CI | Leitura do workflow: o job e o teste que ele roda | F |
 | 5.16 | As imagens constroem **e sobem** no CI | Leitura do workflow | F |
@@ -147,7 +150,7 @@ O **nível** diz quando o item passa a valer:
 | 7.4 | O teste de isolamento tenta atravessar, e descobre as tabelas pelo catálogo | Leitura do teste | F |
 | 7.5 | O teste roda com o papel da aplicação, em banco criado pelo caminho do instalador | Leitura | F, se o banco tem papéis |
 | 7.6 | Chaves entre tabelas levam a organização | Leitura do schema | F, se o banco tem chaves estrangeiras |
-| 7.7 | Todo recurso compartilhado tem regra de posse que falha fechado | Leitura; registro de decisão | F |
+| 7.7 | Todo recurso compartilhado tem regra de posse que falha fechado. Operação que é da instalação, e não de uma organização (atualizar, ligar um serviço), tem registro de decisão dizendo quem pode pedi-la | Leitura; registro de decisão | F |
 | 7.8 | Nenhuma rota assume "só existe uma organização", e rota pública não mostra dado de organização | Leitura das rotas | F |
 | 7.9 | A organização vem da sessão, da chave ou do segredo de quem chama, e nunca do corpo de uma requisição de fora. Chamada entre processos do próprio produto, autenticada por segredo interno, pode levá-la no corpo | Leitura das rotas | F |
 | 7.10 | O papel da aplicação não contorna o isolamento | Leitura | F, se o banco tem papéis |
@@ -160,7 +163,7 @@ O **nível** diz quando o item passa a valer:
 | 8.1 | Tudo o que o operador configura tem tela, ou decisão escrita de que fica no servidor | Leitura do inventário, em `docs/fundacao/configuracao.md` | F |
 | 8.2 | Toda entidade criada pela tela se edita e se remove pela tela | Teste de tela, ou execução | F |
 | 8.3 | Toda tela tem porta no menu, e um teste deriva a lista de telas do que o framework declara | Arquivo: o teste | F |
-| 8.4 | A tela de saúde mostra cada peça e cada ligação | Teste de tela, ou execução | F |
+| 8.4 | A tela de saúde mostra cada peça e cada ligação. A entrada pela qual a própria tela é aberta pode ficar só na checagem do terminal, que a confere de fora | Teste de tela, ou execução | F |
 | 8.5 | Ação destrutiva pede confirmação nomeando o alvo | Teste de tela, ou execução | F |
 | 8.6 | Gestão de equipe e papéis pela tela | Execução | F |
 | 8.7 | Painel da instalação separado, com escopo de leitura e de escrita | Execução | C: quando a instalação servir mais de uma organização |
@@ -194,7 +197,7 @@ O **nível** diz quando o item passa a valer:
 | 10.2 | `CONTRIBUTING`, `GOVERNANCE`, `CREDITS`, `SECURITY`, `CODE_OF_CONDUCT` | Arquivo | F |
 | 10.3 | Regras de produto com o porquê de cada uma | Leitura | F |
 | 10.4 | Formato de pedido de decisão com padrão e prazo | Leitura | F |
-| 10.5 | Proteção do ramo: aprovação de quem não escreveu, e fila de merge. Com um mantenedor só, está registrado quem revisa (um agente revisor distinto de quem implementou conta) | Comando; registro | F |
+| 10.5 | Proteção do ramo: aprovação de quem não escreveu, e fila de merge. Com um mantenedor só, está registrado quem revisa (um agente revisor distinto de quem implementou conta), e o parecer fica no próprio PR: revisão que só existe numa conversa entre sessões não se confere | Comando; registro; leitura dos PRs mesclados | F |
 | 10.6 | Skill de contribuição com pré-voo que só mede e hooks que barram o irreversível | Arquivo | F |
 | 10.7 | As ferramentas do contribuidor medem contra o repositório original | Leitura dos scripts | F |
 | 10.8 | Acolhida automática que não avalia e não baixa código de fora | Arquivo: workflow e cerca | F |
@@ -239,10 +242,10 @@ O **nível** diz quando o item passa a valer:
 | Nº | Exigência | Como conferir | Nível |
 |---|---|---|---|
 | 12.1 | Nenhum serviço de produção sem imagem publicada | Arquivo: a cerca | F |
-| 12.2 | O instalador recusa, com erro claro, instalar uma versão publicada que não tem imagem. Construir na VPS só existe antes da primeira versão | Leitura do instalador | F |
+| 12.2 | O instalador recusa, com erro claro, instalar uma versão publicada que não tem imagem. Depois da primeira versão, construir na VPS só acontece pedido de propósito (uma opção com nome), e o instalador diz o que custa e por que não há imagem (arquitetura sem imagem publicada, versão de desenvolvimento, emergência) | Leitura do instalador | F |
 | 12.3 | A instalação grava número de versão, e não canal, e o código instalado é o da mesma versão das imagens | Execução | F |
 | 12.4 | O nome da imagem e o formato da versão têm uma fonte só | Leitura | F |
-| 12.5 | Imagens para as arquiteturas declaradas | Leitura do workflow | F |
+| 12.5 | Imagens para as arquiteturas declaradas. Declarar menos arquiteturas do que o produto já suportou pede registro de decisão | Leitura do workflow e do README | F |
 | 12.6 | Etiqueta só nasce no CI, do ramo principal: a publicação de imagens recusa etiqueta cujo commit não está no ramo principal, e o repositório restringe quem cria etiqueta de versão | Leitura do workflow; comando | F |
 | 12.7 | Notas por fragmento, com o efeito no operador; número calculado | Arquivo: a cerca | F |
 | 12.8 | "Exige ação" é um bloco do fragmento, com o passo exato | Leitura | F |
@@ -254,9 +257,10 @@ O **nível** diz quando o item passa a valer:
 | 12.14 | Um pedido de atualização por vez, com prazo: pedido aceito e não concluído vira falha visível | Leitura; teste | L |
 | 12.15 | Falha de comunicação do agente fica num registro que persiste, e a tela diz que o agente não está respondendo | Leitura; execução | L |
 | 12.16 | As imagens publicadas baixam sem credencial, numa máquina que nunca entrou no registro | Execução | L |
-| 12.17 | O passo que cria a etiqueta decide pelo commit que mudou a versão nas notas, e não depende de ser o último envio ao ramo principal | Leitura do workflow | L |
+| 12.17 | O passo que cria a etiqueta decide pelo commit que mudou a versão nas notas, e não depende de ser o último envio ao ramo principal, nem de o PR de versão entrar como um commit só (ou o repositório só aceita squash) | Leitura do workflow e da configuração de merge | L |
 | 12.18 | A página da versão só é publicada depois de as imagens baixarem sem credencial | Leitura do workflow | L |
-| 12.19 | Quando a atualização troca um arquivo de configuração montado num contêiner, ela reinicia esse contêiner, na ida e na volta | Teste do kit contando o reinício nos dois caminhos; numa instalação real, a configuração em uso é a nova | F |
+| 12.19 | Quando a atualização troca um arquivo de configuração montado num contêiner, ela faz o contêiner ler o novo (reinício ou recarga), na ida e na volta | Teste do kit contando os dois caminhos; numa instalação real, a configuração em uso é a nova | F |
+| 12.20 | O corte de versão confere os documentos de entrada (README, documento de autoridade, skill de instalar, roteiro de quem chega): nenhuma frase de estado contradiz o que a versão entrega | Leitura do PR de versão: a conferência está registrada nele | L |
 
 ## 13. Método — capítulo 00
 
@@ -284,13 +288,13 @@ página de instalar e as notas de versão dependem dela, e antes da divulgação
 | 14.3 | O corte de versão do produto reprova se a versão não aparecer no site | Leitura do workflow | L |
 | 14.4 | Os comandos e requisitos da página de instalar são os do kit, por leitura, geração ou teste de paridade | Arquivo: o teste, ou o gerador | L |
 | 14.5 | Toda skill do produto tem entrada na página de guias, por geração ou teste de paridade | Arquivo: o teste, ou o gerador | L |
-| 14.6 | Todo conteúdo copiado do produto tem teste de paridade rodando no CI do site | Leitura do CI | L |
+| 14.6 | Todo conteúdo copiado do produto tem teste de paridade rodando no CI do site, e a última execução dele está verde | Leitura do CI | L |
 | 14.7 | Números sociais são lidos da fonte | Leitura | L |
 | 14.8 | A data de atualização vem de uma constante só | Comando: busca | L |
 | 14.9 | O conteúdo está no texto servido, sem depender de script | Execução: a página com scripts desligados | L |
 | 14.10 | Existe o arquivo de resumo para assistentes, com o passo zero | Arquivo | L |
 | 14.11 | O parceiro aparece declarado, com marcação de link patrocinado e o mesmo endereço do repositório | Leitura | L |
-| 14.12 | Os idiomas têm a mesma estrutura, obrigada por tipo e por teste | Arquivo: o teste | L |
+| 14.12 | Os idiomas têm a mesma estrutura, obrigada por tipo e por teste. Com um idioma só, não se aplica | Arquivo: o teste | L |
 | 14.13 | Existe o contrato de marca do site | Arquivo | L |
 | 14.14 | O curso é capturado do aplicativo real, com dados fictícios, procedência por foto e recibo de publicação | Leitura do roteiro e do recibo | L. Pode ficar para depois da divulgação se o desenho disser quando |
 
@@ -298,6 +302,10 @@ página de instalar e as notas de versão dependem dela, e antes da divulgação
 
 De nível L: a equipe que mantém o projeto existe antes da divulgação. O desenvolvimento
 autônomo é de nível C.
+
+Se o dono decidiu não ter equipe, os itens desta seção são "decidido diferente", com a decisão
+escrita e com quem faz cada papel no lugar dela: quem tria os PRs, quem responde à comunidade,
+quem revisa o que entra. O 15.6 vale com ou sem equipe.
 
 | Nº | Exigência | Como conferir | Nível |
 |---|---|---|---|
