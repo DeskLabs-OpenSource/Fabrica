@@ -231,7 +231,7 @@ Scripts pequenos, fora da ferramenta, sem modelo nenhum.
 
 | Vigia | Faz |
 |---|---|
-| Sentinela | Lê o repositório de tempos em tempos, sem gastar nada, e só acorda o suporte se alguém de fora escreveu. A trava nativa da ferramenta para "só rodar se houver o que fazer" olha a atividade de dentro dela, e não o repositório: a sentinela é o que acorda por evento de fora, uma por empresa |
+| Sentinela | Lê o repositório de tempos em tempos, sem gastar nada, e só acorda o suporte se alguém de fora escreveu. A trava nativa da ferramenta para "só rodar se houver o que fazer" parece olhar só a atividade de dentro dela, e não o repositório (inferido do código, não exercitado): a sentinela é o que acorda por evento de fora, uma por empresa |
 | Disjuntor | Pausa agente por falha repetida, por taxa de falha ou por teto; pausa os pesados quando a memória da máquina acaba |
 | Cópia de segurança | Copia o estado da ferramenta para outra máquina |
 
@@ -317,8 +317,9 @@ decisões, e não a implementação. Por isso o roteiro aprovado em lote vem ant
    confira e ligue à mão a aprovação para contratar agente: ela nasce desligada. O ambiente de
    cada agente é montado do zero, nunca copiado de outro agente, porque a cópia herda credencial
    pessoal do dono.
-3. O dono entra com a conta de assinatura na empresa nova, pelo navegador. Conta e segredos não
-   atravessam empresas, nem na mesma instalação. Sem conta, o agente contratado fica parado em
+3. O dono entra com a conta de assinatura na empresa nova, pelo navegador. A conta não atravessa
+   empresas, nem na mesma instalação, e a empresa nova nasce sem segredo nenhum (referência a
+   segredo de outra empresa não testada). Sem conta, o agente contratado fica parado em
    verificação, e a tela não diz por quê: a causa só aparece no registro do processo da ferramenta.
 4. Os vigias sem IA, por empresa, com o modo de ensaio rodado. Vigia escrito para uma empresa só
    precisa receber a empresa como parâmetro antes de servir à segunda.
